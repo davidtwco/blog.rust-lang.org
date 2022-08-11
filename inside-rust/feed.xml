@@ -10,134 +10,1410 @@
         <name>Maintained by the Rust Teams.</name>
         <uri>https://github.com/rust-lang/blog.rust-lang.org/</uri>
     </author>
-    <updated>2019-10-09T18:23:47Z</updated>
+    <updated>2022-08-11T11:59:37+00:00</updated>
 
     
     <entry>
-        <title>Async Foundations Update: Time for polish!</title>
-        <link rel="alternate" href="https://blog.rust-lang.org/inside-rust/2019/10/07/AsyncAwait-WG-Focus-Issues.html" type="text/html" title="Async Foundations Update: Time for polish!" />
-        <published>2019-10-07T00:00:00Z</published>
-        <updated>2019-10-07T00:00:00Z</updated>
-        <id>https://blog.rust-lang.org/inside-rust/2019/10/07/AsyncAwait-WG-Focus-Issues.html</id>
-        <content type="html" xml:base="https://blog.rust-lang.org/inside-rust/2019/10/07/AsyncAwait-WG-Focus-Issues.html">&lt;p&gt;As you've perhaps heard, recently the async-await feature &lt;a href=&quot;/2019/09/30/Async-await-hits-beta.html&quot;&gt;landed on
-the Rust beta branch&lt;/a&gt;. This marks a big turning point in the
-usability story for Async Rust. But there's still a lot of work to do.
-As we mentioned in the main post, the focus for the &lt;a href=&quot;https://rust-lang.github.io/compiler-team/working-groups/async-await/&quot;&gt;Async Foundations
-WG&lt;/a&gt; in the immediate term is going to be &lt;strong&gt;polish&lt;/strong&gt;, &lt;strong&gt;polish&lt;/strong&gt;
-and (ahem) &lt;strong&gt;more polish&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;In particular, we want to take aim at a backlog of strange
-diagnostics, suboptimal performance, and the occasional inexplicable
-type-check failure. This is a shift: whereas before, we could have
-laser focus on things that truly blocked stabilization, we've now got
-a large set of bugs, often without a clear prioritization between
-them. This requires us to mix up how the &lt;a href=&quot;https://rust-lang.github.io/compiler-team/working-groups/async-await/&quot;&gt;Async Foundations WG&lt;/a&gt; is
-operating.&lt;/p&gt;
-&lt;h3&gt;&lt;a href=&quot;#announcing-focus-issues&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot; id=&quot;announcing-focus-issues&quot;&gt;&lt;/a&gt;Announcing: focus issues&lt;/h3&gt;
-&lt;p&gt;So how do you deal with a large pile of issues, all of which are
-important but none of which are vital? One at a time, of course.&lt;/p&gt;
-&lt;p&gt;The way we've chosen to organize this is something we call &lt;strong&gt;&lt;a href=&quot;https://rust-lang.github.io/compiler-team/working-groups/async-await/#how-to-get-involved&quot;&gt;focus
-issues&lt;/a&gt;&lt;/strong&gt;. We're trying to keep a small number of issues tagged as
-focus issues at any given time. As we close them, we'll pick new ones
-to replace them. The number of these issues depends on mentoring
-bandwidth and on how many people are hacking -- as a rule of thumb,
-they should mostly all be assigned and actively progressing at any
-given time.&lt;/p&gt;
-&lt;p&gt;We also have a secondary set of issues called &lt;strong&gt;on deck issues&lt;/strong&gt;.
-These are the candidates to become focus issues as focus issues are
-completed. If you'd like us to consider fixing something sooner rather
-than later, you can &lt;a href=&quot;https://rust-lang.github.io/compiler-team/working-groups/async-await/#nominating-issues&quot;&gt;add the &amp;quot;on deck&amp;quot; label yourself&lt;/a&gt;, along
-with a bit of context explaining why you think this issue is more
-important than the rest.&lt;/p&gt;
-&lt;h3&gt;&lt;a href=&quot;#how-you-can-help&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot; id=&quot;how-you-can-help&quot;&gt;&lt;/a&gt;How you can help&lt;/h3&gt;
-&lt;p&gt;You can help in two ways:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Fix bugs!&lt;/strong&gt; If you'd like to take a shot at fixing a bug, try to
-come to the &lt;a href=&quot;https://rust-lang.github.io/compiler-team/working-groups/async-await/#triage-meeting&quot;&gt;triage meeting&lt;/a&gt; or just show up in
-&lt;a href=&quot;https://rust-lang.zulipchat.com/#narrow/stream/187312-wg-async-foundations&quot;&gt;&lt;code&gt;#wg-async-foundations&lt;/code&gt; on Zulip&lt;/a&gt;. Maybe we can find something
-for you.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Nominate bugs!&lt;/strong&gt; If you've got a bug that is really
-annoying you, feel free to &amp;quot;nominate it&amp;quot; by &lt;a href=&quot;https://rust-lang.github.io/compiler-team/working-groups/async-await/#nominating-issues&quot;&gt;following the
-instructions here&lt;/a&gt;. This will help us to fix the things that
-are bothering people the most.&lt;/li&gt;
-&lt;/ul&gt;
+        <title>Please welcome Dan to Library Contributors</title>
+        <link rel="alternate" href="https://blog.rust-lang.org/inside-rust/2022/08/10/libs-contributors.html" type="text/html" title="Please welcome Dan to Library Contributors" />
+        <published>2022-08-10T00:00:00+00:00</published>
+        <updated>2022-08-10T00:00:00+00:00</updated>
+        <id>https://blog.rust-lang.org/inside-rust/2022/08/10/libs-contributors.html</id>
+        <content type="html" xml:base="https://blog.rust-lang.org/inside-rust/2022/08/10/libs-contributors.html">&lt;p&gt;Please welcome &lt;a href&#x3D;&quot;https://github.com/sunfishcode&quot;&gt;Dan Gohman&lt;/a&gt; to the
+&lt;a href&#x3D;&quot;https://www.rust-lang.org/governance/teams/library#libs-contributors&quot;&gt;Library Contributors&lt;/a&gt; group!&lt;/p&gt;
+&lt;p&gt;You might know Dan from his work on
+&lt;a href&#x3D;&quot;https://wasmtime.dev/&quot;&gt;Wasmtime&lt;/a&gt;, WASI, the recent &lt;a href&#x3D;&quot;https://rust-lang.github.io/rfcs/3128-io-safety.html&quot;&gt;I/O Safety RFC&lt;/a&gt;,
+&lt;a href&#x3D;&quot;https://crates.io/crates/cap-std&quot;&gt;cap-std&lt;/a&gt;, &lt;a href&#x3D;&quot;https://crates.io/crates/rustix&quot;&gt;rustix&lt;/a&gt;,
+or one of his many (often WASI or I/O related) contributions to the Rust standard library.&lt;/p&gt;
+&lt;p&gt;Congratulations Dan, and thanks for everything you do!&lt;/p&gt;
 </content>
 
         <author>
-            <name>Niko Matsakis</name>
+            <name>Mara Bos</name>
         </author>
     </entry>
     
     <entry>
-        <title>Keeping Rust projects secure with cargo-audit 0.9: dependency trees, core advisories, unmaintained crates</title>
-        <link rel="alternate" href="https://blog.rust-lang.org/inside-rust/2019/10/03/Keeping-secure-with-cargo-audit-0.9.html" type="text/html" title="Keeping Rust projects secure with cargo-audit 0.9: dependency trees, core advisories, unmaintained crates" />
-        <published>2019-10-03T00:00:00Z</published>
-        <updated>2019-10-03T00:00:00Z</updated>
-        <id>https://blog.rust-lang.org/inside-rust/2019/10/03/Keeping-secure-with-cargo-audit-0.9.html</id>
-        <content type="html" xml:base="https://blog.rust-lang.org/inside-rust/2019/10/03/Keeping-secure-with-cargo-audit-0.9.html">&lt;p&gt;&lt;a href=&quot;https://github.com/rustsec/cargo-audit&quot;&gt;cargo-audit&lt;/a&gt; is a command-line utility which inspects &lt;code&gt;Cargo.lock&lt;/code&gt; files and compares them against the &lt;a href=&quot;https://rustsec.org&quot;&gt;RustSec Advisory Database&lt;/a&gt;, a community database of security vulnerabilities maintained by the &lt;a href=&quot;https://github.com/rust-secure-code/wg&quot;&gt;Rust Secure Code Working Group&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;You can install &lt;code&gt;cargo-audit&lt;/code&gt; and run it against your project with the following commands:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ cargo install cargo-audit
-$ cargo audit
+        <title>1.63.0 pre-release testing</title>
+        <link rel="alternate" href="https://blog.rust-lang.org/inside-rust/2022/08/09/1.63.0-prerelease.html" type="text/html" title="1.63.0 pre-release testing" />
+        <published>2022-08-09T00:00:00+00:00</published>
+        <updated>2022-08-09T00:00:00+00:00</updated>
+        <id>https://blog.rust-lang.org/inside-rust/2022/08/09/1.63.0-prerelease.html</id>
+        <content type="html" xml:base="https://blog.rust-lang.org/inside-rust/2022/08/09/1.63.0-prerelease.html">&lt;p&gt;The 1.63.0 pre-release is ready for testing. The release is scheduled for
+August 11. &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/blob/stable/RELEASES.md#version-1630-2022-08-11&quot;&gt;Release notes can be found here.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You can try it out locally by running:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-plain&quot;&gt;RUSTUP_DIST_SERVER&#x3D;https://dev-static.rust-lang.org rustup update stable
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The 0.9 release of &lt;code&gt;cargo-audit&lt;/code&gt; includes a number of new features we hope make it more useful, including:&lt;/p&gt;
+&lt;p&gt;The index is &lt;a href&#x3D;&quot;https://dev-static.rust-lang.org/dist/2022-08-09/index.html&quot;&gt;https://dev-static.rust-lang.org/dist/2022-08-09/index.html&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can leave feedback on the &lt;a href&#x3D;&quot;https://internals.rust-lang.org/t/rust-1-63-0-pre-release-testing/17152&quot;&gt;internals thread&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The release team is also thinking about changes to our pre-release process:
+we&#x27;d love your feedback &lt;a href&#x3D;&quot;https://github.com/rust-lang/release-team/issues/16&quot;&gt;on this GitHub issue&lt;/a&gt;.&lt;/p&gt;
+</content>
+
+        <author>
+            <name>Release automation</name>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>Rust Compiler Midyear Report for 2022</title>
+        <link rel="alternate" href="https://blog.rust-lang.org/inside-rust/2022/08/08/compiler-team-2022-midyear-report.html" type="text/html" title="Rust Compiler Midyear Report for 2022" />
+        <published>2022-08-08T00:00:00+00:00</published>
+        <updated>2022-08-08T00:00:00+00:00</updated>
+        <id>https://blog.rust-lang.org/inside-rust/2022/08/08/compiler-team-2022-midyear-report.html</id>
+        <content type="html" xml:base="https://blog.rust-lang.org/inside-rust/2022/08/08/compiler-team-2022-midyear-report.html">&lt;h1&gt;&lt;a href&#x3D;&quot;#rust-compiler-midyear-report-for-2022&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;rust-compiler-midyear-report-for-2022&quot;&gt;&lt;/a&gt;Rust Compiler Midyear Report for 2022&lt;/h1&gt;
+&lt;p&gt;Back in February, the compiler team &lt;a href&#x3D;&quot;/inside-rust/2022/02/22/compiler-team-ambitions-2022.html&quot;&gt;posted a collection&lt;/a&gt; of
+concrete initiatives and hopeful aspirations for this year. This post is a
+midyear report summarizing the progress so far on all of those items.&lt;/p&gt;
+&lt;p&gt;As a reminder, there were three main themes we identified in the work items that
+the team wanted to tackle: Fulfilling Rust&#x27;s Promise (🦀), Developer Delight
+(👩‍💻) and Contributor Workflow (🛠️). Within those themes, we identified a total
+of fourteen work items. Six were concrete initiatives: work items with
+developers committed to contributing their time and making forward progress.
+Eight were &amp;quot;aspirations&amp;quot;: work items that, while of interest to the team, had no
+commitment of development resources.&lt;/p&gt;
+&lt;p&gt;Each work item, regardless of whether it had resources committed or not, had an
+associated owner.
+To construct this progress report, pnkfelix sent each
+owner a survey (you can see what it looks like &lt;a href&#x3D;&quot;https://hackmd.io/Nfs-UmfpQwCiIRHFR-YQfQ?view&quot;&gt;here&lt;/a&gt;).
+In fact, some work items had multiple subprojects, each with its own owner.
+This meant there were actually a total of 22 projects for which we received an update.
+This blog post is the compilation (ha ha) of those survey results.&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#work-items&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;work-items&quot;&gt;&lt;/a&gt;Work Items&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Category&lt;/th&gt;
+&lt;th&gt;&lt;a href&#x3D;&quot;#concrete-initiatives&quot;&gt;Concrete Initiatives&lt;/a&gt;&lt;/th&gt;
+&lt;th&gt;&lt;a href&#x3D;&quot;#aspirations&quot;&gt;Aspirations&lt;/a&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;I-unsound (🦀)&lt;/td&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;#i-unsound-issues-&quot;&gt;Initiatives&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Async Rust (🦀, 👩‍💻)&lt;/td&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;#async-rust-initiatives--&quot;&gt;Initiatives&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Debugging (🦀, 👩‍💻)&lt;/td&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;#debugging-initiatives-&quot;&gt;Initiatives&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;#debugging-aspirations-&quot;&gt;Aspirations&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Faster Builds (👩‍💻, 🛠️)&lt;/td&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;#faster-builds-initiatives--%EF%B8%8F&quot;&gt;Initiatives&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;#faster-builds-aspirations--%EF%B8%8F&quot;&gt;Aspirations&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Expressiveness (👩‍💻, 🦀)&lt;/td&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;#expressiveness-initiatives--&quot;&gt;Initiatives&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;#expressiveness-aspirations--&quot;&gt;Aspirations&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Librarification (🛠️)&lt;/td&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;#librarification-initiatives-%EF%B8%8F&quot;&gt;Initiatives&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;#librarification-aspirations-%EF%B8%8F&quot;&gt;Aspirations&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;P-high Backlog (🦀)&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;#p-high-aspirations-&quot;&gt;Aspirations&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Team Operations (🛠️)&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;#compiler-team-operations-aspirations-%EF%B8%8F&quot;&gt;Aspirations&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Backend (🛠️, 👩‍💻)&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;#compiler-backend-aspirations-%EF%B8%8F-&quot;&gt;Aspirations&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Diagnostics  (👩‍💻)&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;#diagnostics-aspirations-&quot;&gt;Aspirations&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#overall-survey-results&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;overall-survey-results&quot;&gt;&lt;/a&gt;Overall Survey Results&lt;/h2&gt;
+&lt;p&gt;The survey itself had two parts: first, a set of &amp;quot;structured&amp;quot; multiple-choice questions, and second, a set of &amp;quot;unstructured&amp;quot; questions that allowed for free-form answers.&lt;/p&gt;
+&lt;p&gt;The main reasons I provided the structured questions were two-fold: to make it easy for people to respond (e.g. I expected some ambitions to not require filling out any free-form text at all), and to prime the mindset of the respondant before they entered any free-form answers. I hadn&#x27;t actually anticipated trying to do formal analysis of the responses.&lt;/p&gt;
+&lt;p&gt;But, since we &lt;em&gt;do&lt;/em&gt; have those multiple choice answers available, I took a stab at making a table summarizing them.&lt;sup class&#x3D;&quot;footnote-ref&quot;&gt;&lt;a href&#x3D;&quot;#fn1&quot; id&#x3D;&quot;fnref1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; That table is below. (You will probably need to zoom out in your web browser to take it all in.)&lt;/p&gt;
+&lt;table style&#x3D;&quot;width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -49vw; margin-right: -50vw;&quot;&gt;
+&lt;tr style&#x3D;&quot;position: sticky; top: 0; background: #EBEBEB;&quot;&gt;&lt;th&gt;&lt;/th&gt;&lt;th&gt;&lt;a href&#x3D;&quot;#async-traits&quot;&gt;async traits&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href&#x3D;&quot;#diagnostics-aspirations-&quot;&gt;diagnostics improvements&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href&#x3D;&quot;#safe-transmute&quot;&gt;safe transmute&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href&#x3D;&quot;#chalk&quot;&gt;chalk&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href&#x3D;&quot;#generic-associated-types&quot;&gt;Generic Associated Types&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href&#x3D;&quot;#performance-dashboard&quot;&gt;Performance Dashboard&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href&#x3D;&quot;#ease-writing-new-backends-via-intrinsic-mir-fallbacks&quot;&gt;intrinsic MIR fallbacks&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href&#x3D;&quot;#p-high-backlog-processing-aspirations-&quot;&gt;P-high backlog processing&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href&#x3D;&quot;#better-integration-with-trace-based-debuggers&quot;&gt;better integration with trace-based debuggers&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href&#x3D;&quot;#mcve-reduction-tooling&quot;&gt;MCVE reduction tooling&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href&#x3D;&quot;#incremental-compilation-aspirations&quot;&gt;Incremental Compilation&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href&#x3D;&quot;#wg-debugging&quot;&gt;wg-debugging&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href&#x3D;&quot;#debugging-aspirations-&quot;&gt;Debugging Aspirations&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href&#x3D;&quot;#improving-debuginfo-quality&quot;&gt;improving Rust&#x27;s debuginfo quality&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href&#x3D;&quot;#gcc-backend&quot;&gt;GCC backend&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href&#x3D;&quot;#i-unsound-issues-&quot;&gt;I-unsound issues&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href&#x3D;&quot;#const-generics-and-const-eval&quot;&gt;const-generics and const-eval&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href&#x3D;&quot;#async-crashdump-dissection&quot;&gt;async crashdump dissection&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href&#x3D;&quot;#faster-builds-initiatives--%EF%B8%8F&quot;&gt;Faster Builds&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href&#x3D;&quot;#mir-tooling-stable-mir-and-ghost-code&quot;&gt;MIR tooling&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href&#x3D;&quot;#cranelift&quot;&gt;Cranelift&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href&#x3D;&quot;#supporting-split-debuginfo&quot;&gt;supporting split debuginfo&lt;/a&gt;&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th style&#x3D;color:darkgreen rowspan&#x3D;2&gt;any-progress?&lt;/th&gt;&lt;td style&#x3D;color:darkgreen&gt;y&lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt;y&lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt;y&lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt;y&lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt;y&lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt;y&lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt;y&lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt;y&lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt; &lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt; &lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt;y&lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt;y&lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt;y&lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt;y&lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt;y&lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt;y&lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt;y&lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt;y&lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt;y&lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt;y&lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt;y&lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt; &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                      &lt;td style&#x3D;color:darkgreen&gt; &lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt; &lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt; &lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt; &lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt; &lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt; &lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt; &lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt; &lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt;n&lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt;n&lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt; &lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt; &lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt; &lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt; &lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt; &lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt; &lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt; &lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt; &lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt; &lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt; &lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt; &lt;/td&gt;&lt;td style&#x3D;color:darkgreen&gt;n&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th style&#x3D;color:darkorange rowspan&#x3D;6&gt;problem-size?&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                       &lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;&lt;&#x3D;6mo     &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;&lt;&#x3D;6mo     &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;&lt;&#x3D;6mo     &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;&lt;&#x3D;6mo     &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;&lt;&#x3D;6mo     &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                       &lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;&gt;6mo      &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;&gt;6mo      &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;&gt;6mo      &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;&gt;6mo      &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                       &lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;ad-hoc    &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;ad-hoc    &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;ad-hoc    &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;ad-hoc    &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;ad-hoc    &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;ad-hoc    &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;ad-hoc    &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;ad-hoc    &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;ad-hoc    &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                       &lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;who-knows?&lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                       &lt;td style&#x3D;color:darkorange&gt;other     &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;other     &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;other     &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;td style&#x3D;color:darkorange&gt;          &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th style&#x3D;color:maroon rowspan&#x3D;6&gt;resolved-when?&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                    &lt;td style&#x3D;color:maroon&gt;&lt;&#x3D;6mo  &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;&lt;&#x3D;6mo  &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;&lt;&#x3D;6mo  &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;&lt;&#x3D;6mo  &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;&lt;&#x3D;6mo  &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                    &lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;&lt;&#x3D;2yr  &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;&lt;&#x3D;2yr  &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;&lt;&#x3D;2yr  &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;&lt;&#x3D;2yr  &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;&lt;&#x3D;2yr  &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;&lt;&#x3D;2yr  &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;&lt;&#x3D;2yr  &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;&lt;&#x3D;2yr  &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;&lt;&#x3D;2yr  &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;&lt;&#x3D;2yr  &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                    &lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;&gt;2yr   &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;&gt;2yr   &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                    &lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;&amp;infin;&lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;&amp;infin;&lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                    &lt;td style&#x3D;color:maroon&gt;other  &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;other  &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;other  &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;other  &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;other  &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;other  &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;other  &lt;/td&gt;&lt;td style&#x3D;color:maroon&gt;       &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th style&#x3D;color:purple rowspan&#x3D;7&gt;how-it-started?&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                     &lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;had-no-goals            &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;had-no-goals            &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;had-no-goals            &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;had-no-goals            &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;had-no-goals            &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;had-no-goals            &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;had-no-goals            &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;had-no-goals            &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;had-no-goals            &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;had-no-goals            &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;had-no-goals            &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                     &lt;td style&#x3D;color:purple&gt;had-no-plan             &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;had-no-plan             &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;had-no-plan             &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;had-no-plan             &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;had-no-plan             &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                     &lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;milestones-unestablished&lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;milestones-unestablished&lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                     &lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;some-accomplishments    &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;some-accomplishments    &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;some-accomplishments    &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;some-accomplishments    &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                     &lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;wrong-plan              &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                     &lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;                        &lt;/td&gt;&lt;td style&#x3D;color:purple&gt;just-needed-polish      &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th style&#x3D;color:darkblue rowspan&#x3D;10&gt;hows-it-going?&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                       &lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;whats-next?           &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;whats-next?           &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;whats-next?           &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;whats-next?           &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;whats-next?           &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;whats-next?           &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;whats-next?           &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                       &lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;improved-understanding&lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;improved-understanding&lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;improved-understanding&lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;improved-understanding&lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;improved-understanding&lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;improved-understanding&lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;improved-understanding&lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;improved-understanding&lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;improved-understanding&lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;improved-understanding&lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;improved-understanding&lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                       &lt;td style&#x3D;color:darkblue&gt;now-have-plan         &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;now-have-plan         &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;now-have-plan         &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;now-have-plan         &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;now-have-plan         &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;now-have-plan         &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;now-have-plan         &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;now-have-plan         &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                       &lt;td style&#x3D;color:darkblue&gt;now-have-milestones   &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;now-have-milestones   &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;now-have-milestones   &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;now-have-milestones   &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;now-have-milestones   &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;now-have-milestones   &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;now-have-milestones   &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                       &lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;have-contributors     &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;have-contributors     &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;have-contributors     &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;have-contributors     &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;have-contributors     &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;have-contributors     &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;have-contributors     &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;have-contributors     &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;have-contributors     &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;have-contributors     &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                       &lt;td style&#x3D;color:darkblue&gt;completed-milestones  &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;completed-milestones  &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;completed-milestones  &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;completed-milestones  &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;completed-milestones  &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;completed-milestones  &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;completed-milestones  &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;completed-milestones  &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;completed-milestones  &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;completed-milestones  &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;completed-milestones  &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;completed-milestones  &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                       &lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;implemented-solution  &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;implemented-solution  &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;implemented-solution  &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                       &lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;need-user-feedback    &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;need-user-feedback    &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;need-user-feedback    &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;need-user-feedback    &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;need-user-feedback    &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;                                                       &lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;getting-feedback      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;getting-feedback      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;getting-feedback      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;getting-feedback      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;td style&#x3D;color:darkblue&gt;                      &lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;Here are some trends I noted from looking at the table:&lt;/p&gt;
+&lt;p&gt;The overwhelming majority of our ambitions, 19 out of 22, reported &lt;em&gt;some&lt;/em&gt;
+amount of progress. That&#x27;s great, especially given that several of those
+ambitions were mere aspirations that explicitly had no resources attached to
+them at the start of the year.&lt;/p&gt;
+&lt;p&gt;Less than a quarter of the ambitions, 6 out of 22, said that their overall
+problem would be resolved, or the bulk of the problem addressed, within the next
+six months. Ten others said they predicted the important components of their
+solution would be available within the next two years, so that&#x27;s a total of 16
+out of 22 that expect some kind of solution within two years.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;UI improvements for understanding how vulnerabilities apply to your project&lt;/li&gt;
-&lt;li&gt;Warnings for unmaintained crate dependencies (with an option to hard fail)&lt;/li&gt;
-&lt;li&gt;Tracking of vulnerabilities in the Rust language itself&lt;/li&gt;
+&lt;li&gt;Note: One respondent noted that the two year threshold embedded in the
+survey was an &amp;quot;odd timeframe.&amp;quot; I do not disagree with that remark. The
+reality is that I was trying to find a happy medium between two extremes:
+short timeframes don&#x27;t allow enough time for significant work to be
+accomplished, while excessively long timeframes (e.g. greater than five
+years) are very difficult to predict realistically. But the two year
+time frame was drawn somewhat out of a hat.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;&lt;a href=&quot;#ui-improvements-dependency-trees&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot; id=&quot;ui-improvements-dependency-trees&quot;&gt;&lt;/a&gt;UI improvements: dependency trees&lt;/h2&gt;
-&lt;p&gt;Previously, when &lt;code&gt;cargo-audit&lt;/code&gt; found a vulnerability in a project, it would display advisory information without any context as to how a particular vulnerable dependency is included in your project, making it difficult to determine what action needs to be taken to resolve the vulnerability.&lt;/p&gt;
-&lt;p&gt;The latest release prints an inverse dependency tree (ala the excellent &lt;a href=&quot;https://github.com/sfackler/cargo-tree&quot;&gt;cargo-tree&lt;/a&gt; crate) for each advisory showing how a vulnerable dependency is included in your project:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/RustSec/cargo-audit/a840f7b/screenshot.png&quot; alt=&quot;cargo audit with dependency tree&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;In future versions of &lt;code&gt;cargo-audit&lt;/code&gt; we &lt;a href=&quot;https://github.com/RustSec/cargo-audit/issues/23&quot;&gt;hope to add a &lt;code&gt;cargo audit fix&lt;/code&gt; command&lt;/a&gt; ala &lt;code&gt;npm audit fix&lt;/code&gt; which can either automatically update the necessary dependencies or provide instructions on how to do so. If that feature interests you and you'd like to contribute, &lt;a href=&quot;https://github.com/RustSec/cargo-audit/issues/23&quot;&gt;we're looking for help&lt;/a&gt;!&lt;/p&gt;
-&lt;h2&gt;&lt;a href=&quot;#new-feature-unmaintained-crate-warnings&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot; id=&quot;new-feature-unmaintained-crate-warnings&quot;&gt;&lt;/a&gt;New feature: unmaintained crate warnings&lt;/h2&gt;
-&lt;p&gt;This release added the notion of &lt;a href=&quot;https://github.com/RustSec/rustsec-crate/pull/75&quot;&gt;informational advisories&lt;/a&gt; - advisories which don't directly represent a security vulnerability, but may contain potentially security-relevant information. The primary intended use for this feature is &lt;a href=&quot;https://github.com/RustSec/advisory-db/issues/173&quot;&gt;providing warnings for unmaintained crates&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;A recent study, &lt;a href=&quot;https://www.usenix.org/system/files/sec19-zimmermann.pdf&quot;&gt;Small World with High Risks: A Study of Security Threats in the npm Ecosystem&lt;/a&gt;, showed that unmaintained npm packages pose a high risk to that ecosystem:&lt;/p&gt;
+&lt;p&gt;Of the nine concrete initiatives (i.e. ambitions with development resources attached) that reported some progress so far this year, four said they had no specific goal at the start of the year, and two said they had no plan to achieve their goal.
+Similarly, of the ten aspirations (i.e. ambitions without development resources attached) that reported progress, six had no specific goals, and two said they had no plan to achieve their goals.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt; &lt;/th&gt;
+&lt;th&gt;No Specific Goals&lt;/th&gt;
+&lt;th&gt;No Plan&lt;/th&gt;
+&lt;th&gt;Other&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Concrete Initiative&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Aspiration&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Four of those six concrete initiatives that lacked either specific goals or a plan say they now
+have a better understanding of the problem; two of them say they
+now have a plan.&lt;/p&gt;
+&lt;p&gt;Five of the eight aspirations that lacked either specific goals or a plan say they now better understand the problem, and two now have a plan.&lt;/p&gt;
+&lt;p&gt;I spell this out in this level of detail because I was &lt;em&gt;expecting&lt;/em&gt; to see some strong correlation between having development resources and having a plan, at least compared to what the aspirations reported. I think the numbers above show that expectation was incorrect. I&#x27;m not yet sure what lesson to draw from this, apart from being happy that so many ambitions report that they have a better understanding of their respective problem.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Here is a question I want to discuss with the &lt;a href&#x3D;&quot;https://www.rust-lang.org/governance/teams/compiler&quot;&gt;compiler team and  contributors&lt;/a&gt; in some future &lt;a href&#x3D;&quot;https://rust-lang.github.io/compiler-team/about/steering-meeting/&quot;&gt;compiler steering meeting&lt;/a&gt;: Do we, as a
+project, need to put more energy into upfront planning? Or, given our
+volunteer nature, will that just distract people from &amp;quot;the fun stuff&amp;quot; and
+potentially burn out contributors? In other words: is this 4/14 &amp;quot;ambitions
+that spent time making a concrete plan&amp;quot;, is that a value we
+should work on growing? Or should we just monitor it, and not actively try to
+change it?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Note: It is possible that my survey was itself somewhat flawed, so we need
+to be careful in how we interpret this data. My intention was to try to
+capture how well structured a given ambition&#x27;s plan was by asking if it had
+established milestones and/or a schedule. However, the survey results
+include cases where the respondent did &lt;em&gt;not&lt;/em&gt; indicate that they had made a
+plan, but they &lt;em&gt;did&lt;/em&gt; say that this year they did establish milestones.
+Should I have interpreted that as implicitly saying that there &lt;em&gt;was&lt;/em&gt; a plan
+established? Or is the respondent saying that something significant was
+accomplished despite the absence of a plan with concrete milestones?
+Maybe we need to restructure future surveys to make these
+&amp;quot;implied bounds&amp;quot; clearer (ha ha, that&#x27;s a little Rust type system joke).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;One more thing I want to point out: five of the ambitions checked the box in the
+survey that said &amp;quot;some of our work has reached Rust programmers, but we do not
+know if it has improved Rust for them.&amp;quot; (This is listed as &amp;quot;need-user-feedback&amp;quot;
+in the table above.) We should figure out ways to provide such feedback. I know
+that in one case, the lead for diagnostic improvements scours twitter to see if
+people are complaining about Rust&#x27;s error messages (or celebrating them!).
+That&#x27;s one approach, but I think we have to figure out something better. Perhaps
+we could provide an opt-in plugin that provide telemetry to the project about the
+language and compiler features people use. Or maybe you, gentle reader, have a
+better idea to share with us.&lt;/p&gt;
+&lt;p&gt;Having said that, here are the concrete survey results, edited slightly for
+presentation here.&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#concrete-initiatives&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;concrete-initiatives&quot;&gt;&lt;/a&gt;Concrete Initiatives&lt;/h2&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#i-unsound-issues-&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;i-unsound-issues-&quot;&gt;&lt;/a&gt;I-unsound issues (🦀)&lt;/h3&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2022/02/22/compiler-team-ambitions-2022.html#i-unsound-issues-&quot;&gt;Description from February&lt;/a&gt;&lt;/p&gt;
+&lt;!-- https://hackmd.io/@rust-compiler-team/r1Abdj7uq --&gt;
+&lt;p&gt;&lt;strong&gt;Progress:&lt;/strong&gt; The Rust project has made progress on this ambition since the start of the year.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goals:&lt;/strong&gt; we do not think this year’s planned goals for this ambition will be achieved in the next six months, but we do think the most important parts of a solution will be available in the next six months.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it started:&lt;/strong&gt; at start of 2022, we knew a problem existed, but we did not yet have a specific goal in mind for solving the problem.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it&#x27;s going:&lt;/strong&gt; we have milestones that represent individual units of work for the near term that each make progress towards a solution, we have Rust contributors who have agreed to help with the units of work that we have identified, and we have completed some of our milestones.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details:&lt;/strong&gt; We have fixed a few (some long standing) soundness bugs. Some of them were easy to fix, which was surprising considering how long they were open.&lt;/p&gt;
+&lt;p&gt;Working on soundness bugs has a high entry cost, as most work requires either a deeper understanding of the type system or it requires spending a significant amount of time on major refactorings. The work is now being done by existing contributors.&lt;/p&gt;
+&lt;p&gt;An existing Rust contributor who works on fuzzing for ICEs started fuzzing for soundness bugs. Mentoring capabilities are sufficient, considering the lack of mentees.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Regarding prioritization and focus:&lt;/strong&gt; We&#x27;re mostly addressing technical debt or miri work, and letting soundness bug fixes fall out of that work instead of targeting soundness directly.&lt;/p&gt;
+&lt;p&gt;Some soundness bugs are notoriously hard to fix, or even impossible in the current compiler.&lt;/p&gt;
+&lt;p&gt;It is not effective to fix bugs that users will never encounter in practice when they are encountering soundness bugs due to unsafe code much more frequently. So we’ve expanded the focus on miri usability, too, allowing users to find soundness bugs in library code.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#async-rust-initiatives--&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;async-rust-initiatives--&quot;&gt;&lt;/a&gt;Async Rust Initiatives (🦀, 👩‍💻)&lt;/h3&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#async-traits&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;async-traits&quot;&gt;&lt;/a&gt;async traits&lt;/h3&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2022/02/22/compiler-team-ambitions-2022.html#async-traits&quot;&gt;Description from February&lt;/a&gt;&lt;/p&gt;
+&lt;!-- https://hackmd.io/@rust-compiler-team/H1eW9oXdc --&gt;
+&lt;p&gt;&lt;strong&gt;Progress:&lt;/strong&gt; The Rust project has made progress on this ambition since the start of the year.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goals:&lt;/strong&gt; We had a loosely defined goal of shipping async fn in traits this year. tmandry thinks we will at least have an implementation landed in nightly of static, and possibly dyn, async fn in traits by the end of the year. Stabilization timeline is unclear. We think the most important parts of a solution will be available in the next six months. Major design questions should be resolved or in “resolved to experiment” mode by the end of the year. Nightly-only implementation in the next six months, with part of it possibly moving toward stabilization. Should all be stable in two years or less.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it started:&lt;/strong&gt; we had a solution or goal in mind, but did not have a plan for how to achieve it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it&#x27;s going:&lt;/strong&gt; we have a high-level end-to-end plan to solve the problem, we have milestones that represent individual units of work for the near term that each make progress towards a solution,  we have Rust contributors who have agreed to help with the units of work that we have identified, and we have completed some of our milestones.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href&#x3D;&quot;https://github.com/rust-lang/rfcs/pull/3245&quot;&gt;Refined impls RFC&lt;/a&gt; is in final comment period&lt;/li&gt;
+&lt;li&gt;Refactoring work to make async fn easier is ongoing&lt;/li&gt;
+&lt;li&gt;We understand the problem of async fn in &lt;code&gt;dyn&lt;/code&gt; better, and are working to better define the possible design options and potential sticking points with stakeholders on the lang team.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Regarding new contributors:&lt;/strong&gt; For async trait specifically we don&#x27;t have much for new contributors to do. For wg-async we could probably do a better job of finding new contributors and mentoring them on polish issues.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Regarding prioritization and focus:&lt;/strong&gt; Within wg-async we had one area lead who shifted to different work for reasons related to their job. Overall it seems like everyone is struggling a bit with prioritizing async work over other work their company gives them.&lt;/p&gt;
+&lt;p&gt;async drop and async closures are the main thing we are not doing since we decided to focus on async traits first. It seemed like the most fundamental and least controversial. On the &lt;code&gt;dyn&lt;/code&gt; side at least it has proven to be a bit more controversial, but I think it&#x27;s important to have a firm grasp of how that&#x27;s going to work before designing other async features.&lt;/p&gt;
+&lt;p&gt;We may want to focus on shipping static async fn in trait with an experimental proposal for &lt;code&gt;dyn&lt;/code&gt; being worked on, then shift our attention to async drop next.&lt;/p&gt;
+&lt;p&gt;If we reached the point where almost no one is blocked by having to use &lt;code&gt;#[async_trait]&lt;/code&gt;, but many people are blocked by the lack of async drop,
+then that would lead us to change our focus.&lt;/p&gt;
+&lt;p&gt;We have an async stakeholders group that we use for this kind of input, but haven&#x27;t convened with them in quite some time. We should make an effort to update them and find out where the pain points are again.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#async-crashdump-dissection&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;async-crashdump-dissection&quot;&gt;&lt;/a&gt;async crashdump dissection&lt;/h3&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2022/02/22/compiler-team-ambitions-2022.html#async-crashdump-dissection&quot;&gt;Description from February&lt;/a&gt;&lt;/p&gt;
+&lt;!-- https://hackmd.io/@rust-compiler-team/SJYL9iQ_9 --&gt;
+&lt;p&gt;&lt;strong&gt;Progress:&lt;/strong&gt; The Rust project has made progress on this ambition since the start of the year, but we do not think this year’s planned goals for this ambition will be achieved in the next six months. We think a solution will be available in the next two years, but not sooner than six months.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it started:&lt;/strong&gt; At start of 2022, we had a plan for how to achieve a specific goal, but we did not have intermediate progress points (aka “milestones”) established.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it&#x27;s going:&lt;/strong&gt; We understand the problem better than we did at the start of the year, and we have completed some of our milestones. Some of our work has reached Rust programmers, but we do not know if it has improved Rust for them&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details:&lt;/strong&gt; @mw thinks we made a lot of progress on the compiler side. &lt;code&gt;rustc&lt;/code&gt; now encodes most of the information we need for implementing logical stack traces. Only the information about file/line of await points in not readily available.&lt;/p&gt;
+&lt;p&gt;We also implemented a fairly good testing framework for debugger plugins at:
+https://github.com/rust-lang/rust-dbg-ext/tree/main/test-framework/dbt&lt;/p&gt;
+&lt;p&gt;The two main obstacles are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;there are some many different debuggers, all with different extension mechanisms of varying capabilities. It&#x27;s not quite clear how to make use of the rich information we have available in debuginfo.&lt;/li&gt;
+&lt;li&gt;A large part of the logic for generating logical stack traces is executor-framework dependent (and there even different versions can need different logic). It&#x27;s unclear how to best deal with that.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#debugging-initiatives-&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;debugging-initiatives-&quot;&gt;&lt;/a&gt;Debugging Initiatives (🦀)&lt;/h3&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#wg-debugging&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;wg-debugging&quot;&gt;&lt;/a&gt;wg-debugging&lt;/h3&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2022/02/22/compiler-team-ambitions-2022.html#debugging-initiatives-&quot;&gt;Description from February&lt;/a&gt;&lt;/p&gt;
+&lt;!-- https://hackmd.io/@rust-compiler-team/HJOtiiQOq --&gt;
+&lt;p&gt;&lt;strong&gt;Progress:&lt;/strong&gt; The Rust project has made progress on this ambition since the start of the year&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goals:&lt;/strong&gt; We think this year’s planned goals for this ambition will be achieved in the next six months. (This is based on the &amp;quot;immediate goals&amp;quot; listed in the ambitions blog post.)
+We think a solution will be available in the next two years, but not sooner than six months. In general, there is always more we can do here but wesleywiser thinks we’ll have made significant, noticeable progress within the next two years and probably even within this year.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it started:&lt;/strong&gt; At start of 2022, we knew a problem existed, but we did not yet have a specific goal in mind for solving the problem.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it&#x27;s going:&lt;/strong&gt; We would like help deciding what to do next.
+We understand the problem better than we did at the start of the year,  we have Rust contributors who have agreed to help with the units of work that we have identified,
+and we have completed some of our milestones. Furthermore, (some of) our work has reached Rust programmers. In some cases, we do not know if it has improved Rust for them; in others, what we learn of their usage is informing our plans going forward.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details:&lt;/strong&gt; wg-debugging has been spun up. We now are conducting regular status/design and triage meetings. We are working through the backlog of A-debuginfo issues. There is active participation from a number of contributors.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#improving-debuginfo-quality&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;improving-debuginfo-quality&quot;&gt;&lt;/a&gt;improving debuginfo quality&lt;/h3&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2022/02/22/compiler-team-ambitions-2022.html#debugging-initiatives-&quot;&gt;Description from February&lt;/a&gt;&lt;/p&gt;
+&lt;!-- https://hackmd.io/@rust-compiler-team/HJQ25sXOq --&gt;
+&lt;p&gt;&lt;strong&gt;Progress:&lt;/strong&gt; The Rust project has made progress on this ambition since the start of the year&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goals:&lt;/strong&gt; We had no goals for this ambition planned for this year, but we made ad-hoc progress on the problem itself.
+There’s nearly an unbounded amount of effort that could be spent improving debuginfo quality but @wesleywiser thinks we are making significant improvement both over the last 6 months and in the final 6 months of this year as well.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it started:&lt;/strong&gt; At start of 2022, we knew a problem existed, but we did not yet have a specific goal in mind for solving the problem.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it&#x27;s going:&lt;/strong&gt; We would like help deciding what to do next.
+We understand the problem better than we did at the start of the year,  we have Rust contributors who have agreed to help with the units of work that we have identified,
+Furthermore, (some of) our work has reached Rust programmers. In some cases, we do not know if it has improved Rust for them; in others, what we learn of their usage is informing our plans going forward.
+Much of the work @wesleywiser is aware of has landed in 1.60 or 1.61 but there are a few small pieces landing in 1.62 (current beta).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details:&lt;/strong&gt;
+We&#x27;ve made concrete improvements/fixes to debuginfo generation.&lt;/p&gt;
+&lt;p&gt;Specifically:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Change char type in debuginfo to DW_ATE_UTF &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/89887&quot;&gt;#89887&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix debuginfo for pointers/references to unsized types &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/93006&quot;&gt;#93006&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;debuginfo: Support fat pointers to unsized tuples. &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/94050&quot;&gt;#94050&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;debuginfo: Fix bug in type name generation for dyn types with associated types but no other generic arguments. &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/94810&quot;&gt;#94810&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;async: Give predictable name to binding generated from .await expressions. &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/95011&quot;&gt;#95011&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;debuginfo: Fix debuginfo for Box&amp;lt;T&amp;gt; where T is unsized. &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/95270&quot;&gt;#95270&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;debuginfo: Emit ZST struct debuginfo for unit type when CPP-like debuginfo is enabled &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/96316&quot;&gt;#96316&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Surprises:
+Debuginfo just doesn&#x27;t have enough test coverage, but that isn&#x27;t particularly surprising.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Regarding prioritization and focus:&lt;/strong&gt; debugging in general is a top priority for @mw &amp;amp; @wesleywiser’s
+team.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#supporting-split-debuginfo&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;supporting-split-debuginfo&quot;&gt;&lt;/a&gt;supporting split debuginfo&lt;/h3&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2022/02/22/compiler-team-ambitions-2022.html#debugging-initiatives-&quot;&gt;Description from February&lt;/a&gt;&lt;/p&gt;
+&lt;!-- https://hackmd.io/@rust-compiler-team/ByXfjiXu5 --&gt;
+&lt;p&gt;&lt;strong&gt;Progress:&lt;/strong&gt; The Rust project has not made any progress on this ambition since the start of the year (@pnkfelix: but the free form answer somewhat contradicts this)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goals:&lt;/strong&gt; As of today, we think this year’s planned goals for this ambition will be achieved in the next six months, and we think the most important parts of a solution will be available in the next six months.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Where we started:&lt;/strong&gt; At the start of 2022, we had completed most of our plan; our main focus was polish and getting the work into the hands of Rust users.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it&#x27;s going:&lt;/strong&gt; As of today, we think we have implemented a solution to the problem, but most of our work has not yet landed in hands of Rust users&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details:&lt;/strong&gt; There hasn&#x27;t been a lot of progress on split debuginfo in 2022 because most of the big pending work that was in-progress landed in late 2021 (namely integration of &lt;a href&#x3D;&quot;https://github.com/rust-lang/thorin&quot;&gt;thorin&lt;/a&gt; into rustc to support cross-crate Split DWARF). Since then, Split DWARF has been basically complete and just simmering on nightly; an FCP for stabilization on Linux has completed. Split debuginfo on non-DWARF platforms is already complete and stable.&lt;/p&gt;
+&lt;p&gt;Progress this year has primarily been some benchmarking of Split DWARF and some work to make split debuginfo an option when bootstrapping rustc (i.e. in &lt;code&gt;config.toml&lt;/code&gt;), but not a lot else.&lt;/p&gt;
+&lt;p&gt;Future work is basically just stabilization of &lt;code&gt;-Csplit-debuginfo&lt;/code&gt; on Linux (Split DWARF); and of the currently-default options for the other platforms (for example, &lt;code&gt;-Csplit-debuginfo&#x3D;packed&lt;/code&gt; on Windows requires &lt;code&gt;-Zunstable-options&lt;/code&gt; despite being effectively the default if you don&#x27;t specify any flags).&lt;/p&gt;
+&lt;p&gt;The owner of this work, @davidtwco, intends to stick with the theme of debugging and contribute to the wg-debugging working group, but has also shifted attention to diagnostic translation they see that as an interesting area where they can have impact (and because the remaining implementation tasks for split debuginfo were completed as noted above).&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#better-integration-with-trace-based-debuggers&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;better-integration-with-trace-based-debuggers&quot;&gt;&lt;/a&gt;better integration with trace-based debuggers&lt;/h3&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2022/02/22/compiler-team-ambitions-2022.html#debugging-initiatives-&quot;&gt;Description from February&lt;/a&gt;&lt;/p&gt;
+&lt;!-- https://hackmd.io/@rust-compiler-team/BkJSsi7d5 --&gt;
+&lt;p&gt;&lt;strong&gt;Progress:&lt;/strong&gt; The Rust project has not made any progress on this ambition since the start of the year.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goals:&lt;/strong&gt; We do not think this year’s planned goals for this ambition will be achieved in the next six months;
+we think a solution will be available in the next two years, but not sooner than six months.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it started:&lt;/strong&gt; At start of 2022, we had a solution or goal in mind, but did not have a plan for how to achieve it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it&#x27;s going:&lt;/strong&gt; We would like help deciding what to do next.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details:&lt;/strong&gt; @pnkfelix spent a significant portion of 2021 learning about &lt;code&gt;rr&lt;/code&gt; and
+&lt;code&gt;pernos.co&lt;/code&gt;. They had hoped to spend some of 2022 trying to improve the
+experience when using those tools with Rust, but so far @pnkfelix has failed to
+allocate sufficient time to make headway here.&lt;/p&gt;
+&lt;p&gt;One thing that @pnkfelix thinks would be great to deliver would be recreating
+&lt;code&gt;pernos.co&lt;/code&gt;&#x27;s click-on-terminal behavior, which jumps to the point in the
+control flow where that specific character was emitted to stdout/stderr.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#faster-builds-initiatives--️&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;faster-builds-initiatives--️&quot;&gt;&lt;/a&gt;Faster Builds Initiatives (👩‍💻, 🛠️)&lt;/h3&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2022/02/22/compiler-team-ambitions-2022.html#faster-builds-initiatives--%EF%B8%8F&quot;&gt;Description from February&lt;/a&gt;&lt;/p&gt;
+&lt;!-- https://hackmd.io/@rust-compiler-team/B1O2siXd9 --&gt;
+&lt;p&gt;&lt;strong&gt;Progress:&lt;/strong&gt; The Rust project has made progress on this ambition since the start of the year, and we think this year’s planned goals for this ambition will be achieved in the next six months. (Note that also we think our chosen problem is never-ending and will never be “resolved”.)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it started:&lt;/strong&gt; at start of 2022, we had a solution or goal in mind, but did not have a plan for how to achieve it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it&#x27;s going:&lt;/strong&gt; we understand the problem better than we did at the start of the year, we have a high-level end-to-end plan to solve the problem, we have milestones that represent individual units of work for the near term that each make progress towards a solution, and we have Rust contributors who have agreed to help with the units of work that we have identified. Furthermore, we have completed some of our milestones, and some of our work has reached Rust programmers, but we do not know if it has improved Rust for them.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details:&lt;/strong&gt; The &lt;a href&#x3D;&quot;https://hackmd.io/YJQSj_nLSZWl2sbI84R1qA&quot;&gt;roadmap&lt;/a&gt; has 22 items on it. Currently progress is currently:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Completed: 9&lt;/li&gt;
+&lt;li&gt;Some progress: 9&lt;/li&gt;
+&lt;li&gt;No progress: 4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Regarding new contributors:&lt;/strong&gt; We have had four people show interest.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;@Kobzol has become a highly effective contributor, doing lots of PRs on rustc-perf and rustc, and regularly meeting with @nnethercote and @lqd.&lt;/li&gt;
+&lt;li&gt;@martingms has done a few small improvements to rustc, but hasn&#x27;t had much time available recently.&lt;/li&gt;
+&lt;li&gt;@miwig has made a few improvements to rustc-perf&#x27;s data presentation.&lt;/li&gt;
+&lt;li&gt;One other person made initial contact but has done nothing since, even after one follow-up.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Regarding prioritization and focus:&lt;/strong&gt; If finding compiler performance wins gets too difficult, then the owners of this project may shift their focus elsewhere. Its worth noting, however, that one of the owners, @nnethercote, &lt;em&gt;was&lt;/em&gt; harboring those sorts of feelings before @lqd did their analysis identifying new opportunities for big wins. Thus, better data and analysis was sufficient to enable a new round of progress this time, but that may be harder to repeat in the future.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#expressiveness-initiatives--&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;expressiveness-initiatives--&quot;&gt;&lt;/a&gt;Expressiveness Initiatives (👩‍💻, 🦀)&lt;/h3&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#generic-associated-types&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;generic-associated-types&quot;&gt;&lt;/a&gt;Generic Associated Types&lt;/h3&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2022/02/22/compiler-team-ambitions-2022.html#expressiveness-initiatives--&quot;&gt;Description from February&lt;/a&gt;&lt;/p&gt;
+&lt;!-- https://hackmd.io/@rust-compiler-team/BkM83iX_9 --&gt;
+&lt;p&gt;&lt;strong&gt;Progress:&lt;/strong&gt; The Rust project has made progress on this ambition since the start of the year&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goals:&lt;/strong&gt; We think this year’s planned goals for this ambition will be achieved in the next six months
+and that the most important parts of a solution will likewise be available in the next six months.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it started:&lt;/strong&gt; At start of 2022, we had a plan, some of which had been completed, but more work remained to be done.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it&#x27;s going:&lt;/strong&gt; We have completed some of our milestones. Some of our work has reached Rust users and what we learn of their usage is informing our plans going forward&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details:&lt;/strong&gt; We moved the GATs implementation from “close to ready to stabilize” to “ready to stabilize” - at least in our eyes. This included added a “self outlives lint”, changing the recommended location of GAT where clauses, patching future-compatibility traps, and fixing smaller papercut bugs. After opening a stabilization PR, there was a non-insignificant amount of pushback. In the time sense, we’ve considered how to better message the current state of the implementation - specifically how we see stabilization as a stepping stone in the overall adoption of GATs, with obvious ergonomic and technical (mainly around HRTBs) limitations being future work.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Regarding new contributors:&lt;/strong&gt; There has not been much community involvement in the implementation, but many people have shown up to express their support (or dissent) in the stabilization PR.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Regarding prioritization and focus:&lt;/strong&gt; Since the opening of the stabilization PR and following pushback, progress has been slow. That has, in part, been to try to incorporate work from other projects (NLL, a-mir-formality) into the “stabilization package” - either through direct improvements (from NLL) or a more clear future (through modeling of GATs in a-mir-formality). However, there are other bits of work (writing docs, triaging new issues) that could be done in parallel that have been somewhat partially neglected.&lt;/p&gt;
+&lt;p&gt;For @jackh726, switching to getting NLL stabilized was a nice change of pace. In a sense, it was “low-hanging fruit” and was a helpful mental break from pushing so hard on GATs for the past year.&lt;/p&gt;
+&lt;p&gt;If @jackh726 hadn’t been working on GATs for the past year or so, they would have instead been pushing harder on Chalk and librarifcation. In particular, there are fundamental questions, e.g. associated type normalization, to solve there. Recent work with a-mir-formality has started to help answer those. In the meantime, GATs were at a state that they were “unblocked”, had significant interest, and are a requirement for other language (async fns in traits) and lib (LendingIterator) features.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#safe-transmute&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;safe-transmute&quot;&gt;&lt;/a&gt;safe transmute&lt;/h3&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2022/02/22/compiler-team-ambitions-2022.html#expressiveness-initiatives--&quot;&gt;Description from February&lt;/a&gt;&lt;/p&gt;
+&lt;!-- https://hackmd.io/@rust-compiler-team/HJ7Y3s7uq --&gt;
+&lt;p&gt;&lt;strong&gt;Progress:&lt;/strong&gt; The Rust project has made progress on this ambition since the start of the year&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goals:&lt;/strong&gt; We think this year’s planned goals for this ambition will be achieved in the next six months;
+we think the most important parts of the problem are now (or very soon to be) solved, and additional parts of the solution will be available in the next six months.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it started:&lt;/strong&gt; At start of 2022, we had a plan, some of which had been completed, but more work remained to be done. Furthermore, that plan was not sufficient and was in need of revision before it could actually solve the problem.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it&#x27;s going:&lt;/strong&gt; we understand the problem better than we did at the start of the year,
+we have a high-level end-to-end plan to solve the problem,
+we have milestones that represent individual units of work for the near term that each make progress towards a solution
+we have Rust contributors who have agreed to help with the units of work that we have identified.
+Further more, we have completed some of our milestones; we think we have implemented a solution to the problem, but most of our work has not yet landed in hands of Rust users&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details:&lt;/strong&gt; At the start of the year, we opened &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/92268&quot;&gt;PR #92268&lt;/a&gt;, &lt;em&gt;Initial Implementation of Transmutability Trait&lt;/em&gt;, which aimed to provide the basic functionality of a trait implemented for any two types transmutable into each other (as defined by &lt;a href&#x3D;&quot;https://github.com/rust-lang/compiler-team/issues/411&quot;&gt;MCP #411&lt;/a&gt;). This PR required additional testing and polish before it would be ready to merge, but progress unfortunately stalled in the spring.&lt;/p&gt;
+&lt;p&gt;With the mentoring provided by @oli-obk and an influx of interest and help from @m1el, progress resumed this summer; notably:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A significant effort in testing revealed flaws in the initial implementation approach. Fortunately, we quickly &lt;a href&#x3D;&quot;https://rust-lang.zulipchat.com/#narrow/stream/216762-project-safe-transmute/topic/Implementation/near/288584316&quot;&gt;discovered&lt;/a&gt; and implemented an alternative (and arguably simpler) implementation strategy!&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;rustc_transmute&lt;/code&gt; crate now only &lt;em&gt;optionally&lt;/em&gt; depends on other &lt;code&gt;rustc_*&lt;/code&gt; dependencies, allowing contributors to edit, build, and test the core implementation using the familiar &lt;code&gt;cargo&lt;/code&gt; commands, rather than building the entire compiler.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/92268&quot;&gt;PR #92268&lt;/a&gt; is now undergoing the final polish required for it to be merged, and &lt;a href&#x3D;&quot;https://rust-lang.zulipchat.com/#narrow/stream/216762-project-safe-transmute/topic/Implementation/near/290258987&quot;&gt;near-future units of follow-up work&lt;/a&gt; have been identified.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Regarding new contributors:&lt;/strong&gt; An influx of interest and help from @m1el jolted Project Safe Transmute out of its doldrums. Additionally, @joshlf, an early collaborator on Project Safe Transmute, anticipates he will soon be able to rejoin the implementation effort.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Regarding prioritization and focus:&lt;/strong&gt; Personal and professional obligations sapped the capacity of collaborators to contribute. These obligations have been resolved, and progress is being made once again.&lt;/p&gt;
+&lt;p&gt;@jswrenn&#x27;s work on as-casting and enum reform has been slowed by their focus on safe transmute. @jswrenn is increasingly able to devote attention to enum reform, but most of their attention remains on project safe transmute; they believe safe transmute is critically important to writing safe, performant code.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#librarification-initiatives-️&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;librarification-initiatives-️&quot;&gt;&lt;/a&gt;Librarification Initiatives (🛠️)&lt;/h3&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#chalk&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;chalk&quot;&gt;&lt;/a&gt;Chalk&lt;/h3&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2022/02/22/compiler-team-ambitions-2022.html#chalk&quot;&gt;Description from February&lt;/a&gt;&lt;/p&gt;
+&lt;!-- https://hackmd.io/@rust-compiler-team/HyVh2sQdq --&gt;
+&lt;p&gt;&lt;strong&gt;Progress:&lt;/strong&gt; The Rust project has made progress on this ambition since the start of the year&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goals:&lt;/strong&gt; We had no goals for this ambition planned for this year, but we made ad-hoc progress on the problem itself.
+We think a solution will be available in the next two years, but not sooner than six months.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it started:&lt;/strong&gt; At start of 2022, we knew a problem existed, but we did not yet have a specific goal in mind for solving the problem.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it&#x27;s going:&lt;/strong&gt; We understand the problem better than we did at the start of the year.
+We have a high-level end-to-end plan to solve the problem.
+We have Rust contributors who have agreed to help with the units of work that we have identified.
+We have completed some of our milestones.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details:&lt;/strong&gt; Relatively little work has been made on Chalk itself. However, somewhat recent progress has been made to move &lt;code&gt;TyKind&lt;/code&gt; to &lt;code&gt;rustc_type_ir&lt;/code&gt;, which at first glance was a hard problem (and &lt;em&gt;was&lt;/em&gt; hard, but more doable than originally thought). This unblocks more piecemeal librarification. Other recent work has been done align the Chalk and rustc &lt;code&gt;TypeFoldable&lt;/code&gt;-related types. Also, initially work to unify rustc and Chalk handling of early-bound parameters has happened, which also can be iteratively progressed. Finally, related work on a-mir-formality has helped to clarify long-term decisions on the direction of Chalk and an independent trait solver.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Regarding new contributors:&lt;/strong&gt; We have had a few new regular and semi-regular contributors make progress on Chalk and librarification, but not any &lt;em&gt;new&lt;/em&gt; contributors to the Rust Project.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Regarding prioritization and focus:&lt;/strong&gt; This project has not been the main focus of anyone involved (this year).&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#aspirations&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;aspirations&quot;&gt;&lt;/a&gt;Aspirations&lt;/h2&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#p-high-backlog-processing-aspirations-&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;p-high-backlog-processing-aspirations-&quot;&gt;&lt;/a&gt;P-high Backlog Processing Aspirations (🦀)&lt;/h3&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2022/02/22/compiler-team-ambitions-2022.html#p-high-aspirations-&quot;&gt;Description from February&lt;/a&gt;&lt;/p&gt;
+&lt;!-- https://hackmd.io/@rust-compiler-team/SkS1psm_c --&gt;
+&lt;p&gt;&lt;strong&gt;Progress:&lt;/strong&gt; The Rust project has made progress on this ambition since the start of the year&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goals:&lt;/strong&gt; We had no goals for this ambition planned for this year, but we made ad-hoc progress on the problem itself
+We think a solution will be available in the next two years, but not sooner than six months.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it started:&lt;/strong&gt; At start of 2022, we knew a problem existed, but we did not yet have a specific goal in mind for solving the problem.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it&#x27;s going:&lt;/strong&gt; we understand the problem better than we did at the start of the year
+we have a high-level end-to-end plan to solve the problem
+we have milestones that represent individual units of work for the near term that each make progress towards a solution
+we have completed some of our milestones&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details:&lt;/strong&gt; The Compiler team has instituted a policy that we will schedule a review of the P-high issues approximately every six weeks. The primary goal of the review is to ensure that every P-high issue has an owner, preferably in the form of an assigned working-group (and preferably a working-group that has a structured issue triage process), but it is also acceptable for the owner to be an individual, as long as there is evidence that the issue is not forgotten.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Regarding prioritization and focus:&lt;/strong&gt; We deliberately chose a low-frequency event to drive the review so that we would not be distracting from other work with this backlog processing. That is, we are giving this task some priority, but certainly not the highest priority, that is deliberate.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#debugging-aspirations-&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;debugging-aspirations-&quot;&gt;&lt;/a&gt;Debugging Aspirations (👩‍💻)&lt;/h3&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2022/02/22/compiler-team-ambitions-2022.html#debugging-aspirations-&quot;&gt;Description from February&lt;/a&gt;&lt;/p&gt;
+&lt;!-- https://hackmd.io/@rust-compiler-team/SyM2poXu9 --&gt;
+&lt;p&gt;&lt;strong&gt;Progress:&lt;/strong&gt; The Rust project has made progress on this ambition since the start of the year&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goals:&lt;/strong&gt; we had no goals for this ambition planned for this year, but we made ad-hoc progress on the problem itself
+we think a solution will be available in the next two years, but not sooner than six months.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it started:&lt;/strong&gt; at start of 2022, we had a solution or goal in mind, but did not have a plan for how to achieve it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it&#x27;s going:&lt;/strong&gt; We understand the problem better than we did at the start of the year
+we have completed some of our milestones
+we think we have implemented a solution to the problem, but most of our work has not yet landed in hands of Rust users.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details:&lt;/strong&gt; We had three specific aspirations identified in the compiler team blog post:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Better integration between Cargo and debuggers, specifically in regards to starting and configuring the debugger.
+&lt;ul&gt;
+&lt;li&gt;We have not made progress on this aspiration.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Improve expression evaluation support in various debuggers.
+&lt;ul&gt;
+&lt;li&gt;wg-debugging has had discussions during our status &amp;amp; design meetings on how this could be achieved, but we have not made concrete progress on this aspiration.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Revise our debugger extension architecture for rendering Rust data structures.
+&lt;ul&gt;
+&lt;li&gt;&lt;a href&#x3D;&quot;https://github.com/rust-lang/rfcs/pull/3191&quot;&gt;RFC 3191&lt;/a&gt; has been approved and implemented on nightly toolchains but not yet stabilized.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Regarding new contributors:
+RFC 3191 was written and implemented by a new contributor (@ridwanabdillahi).&lt;/p&gt;
+&lt;p&gt;Regarding prioritization and focus:
+There isn&#x27;t much focus happening here currently.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#faster-builds-aspirations--️&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;faster-builds-aspirations--️&quot;&gt;&lt;/a&gt;Faster Builds Aspirations (👩‍💻, 🛠️)&lt;/h3&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#incremental-compilation-aspirations&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;incremental-compilation-aspirations&quot;&gt;&lt;/a&gt;Incremental Compilation Aspirations&lt;/h3&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2022/02/22/compiler-team-ambitions-2022.html#incremental-compilation-aspirations&quot;&gt;Description from February&lt;/a&gt;&lt;/p&gt;
+&lt;!-- https://hackmd.io/@rust-compiler-team/B1D7CiX_c --&gt;
+&lt;p&gt;&lt;strong&gt;Progress:&lt;/strong&gt;
+The Rust project has made progress on this ambition since the start of the year&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goals&lt;/strong&gt;:
+we had no goals for this ambition planned for this year, but we made ad-hoc progress on the problem itself.
+we think a solution will be available in the next two years, but not sooner than six months.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it started&lt;/strong&gt;:
+at start of 2022, we knew a problem existed, but we did not yet have a specific goal in mind for solving the problem.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it&#x27;s going&lt;/strong&gt;:
+we would like help deciding what to do next
+we have Rust contributors who have agreed to help with the units of work that we have identified&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We have refactored the global HIR visitor to reduce the amount of accesses to HIR. Using this, we managed to reduce incremental reuse and avoid some recomputations.&lt;/p&gt;
+&lt;p&gt;We have laid down the first steps for implementing “salsa jars” in the rustc query system. Those first steps are being implemented by a contributor, but the future plans are not fully designed yet.&lt;/p&gt;
+&lt;p&gt;We have established the constraints for extending the query system with “salsa entities”. The design is much more subtle than anticipated, and will take longer than planned.&lt;/p&gt;
+&lt;p&gt;Integration of lowering into the query system is still in review. This blocks progress on making name resolution incremental.&lt;/p&gt;
+&lt;p&gt;Regarding new contributors:
+The progress has been made in part thanks to @kckeiks.&lt;/p&gt;
+&lt;p&gt;Regarding prioritization and focus:
+One of the owners, @cjgillot started a large refactor of lifetime resolution.
+This refactor allowed for faster progress in fixing a few old bugs.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#inter-crate-sharing-aspirations&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;inter-crate-sharing-aspirations&quot;&gt;&lt;/a&gt;Inter-crate Sharing Aspirations&lt;/h3&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2022/02/22/compiler-team-ambitions-2022.html#inter-crate-sharing-aspirations&quot;&gt;Description from February&lt;/a&gt;&lt;/p&gt;
+&lt;!-- https://hackmd.io/zad1BjIoR8S4IfE49z-xYg --&gt;
+&lt;!-- (no survey response as of 2022-07-19) --&gt;
+&lt;p&gt;No survey response was provided; after following up, we confirmed with the
+owners that nothing has happened here, and that progress is unlikely in the near
+term because this would almost certainly require changes to Cargo, where changes
+are hard to push forward right now due to lack of reviewing capacity.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#expressiveness-aspirations--&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;expressiveness-aspirations--&quot;&gt;&lt;/a&gt;Expressiveness Aspirations (🦀, 👩‍💻)&lt;/h3&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#const-generics-and-const-eval&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;const-generics-and-const-eval&quot;&gt;&lt;/a&gt;const generics and const eval&lt;/h3&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2022/02/22/compiler-team-ambitions-2022.html#expressiveness-aspirations--&quot;&gt;Description from February&lt;/a&gt;&lt;/p&gt;
+&lt;!-- https://hackmd.io/@rust-compiler-team/HktiComdq --&gt;
+&lt;p&gt;&lt;strong&gt;Progress:&lt;/strong&gt; The Rust project has made progress on this ambition since the start of the year.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goals:&lt;/strong&gt; We had no goals for this ambition planned for this year, but we made ad-hoc progress on the problem itself. We do not think a solution will be achieved in the next two years, but we do think it is a solvable problem&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it started:&lt;/strong&gt; at start of 2022, we knew a problem existed, but we did not yet have a specific goal in mind for solving the problem.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it&#x27;s going:&lt;/strong&gt; we understand the problem better than we did at the start of the year, and we have Rust contributors who have agreed to help with the units of work that we have identified.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details:&lt;/strong&gt; We have started to document the design and implementation challenges of const generics &lt;a href&#x3D;&quot;https://github.com/rust-lang/project-const-generics/issues?q&#x3D;is%3Aissue+is%3Aopen+label%3AC-design-docs&quot;&gt;on GitHub&lt;/a&gt;. We are generally spending some time to improve our understanding of the overall design.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Regarding new contributors:&lt;/strong&gt; Yes, for const generics we have 1 new major contributor, and we currently have enough mentoring capacity to support them.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Regarding prioritization and focus:&lt;/strong&gt; @lcnr has shifted to looking into general type system cleanups, because they believe that improving both the type system itself, and their understanding of it, will improve the experience of working on const generics and prevent us from making unnecessary mistakes in the future.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#librarification-aspirations-️&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;librarification-aspirations-️&quot;&gt;&lt;/a&gt;Librarification Aspirations (🛠️)&lt;/h3&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#mir-tooling-stable-mir-and-ghost-code&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;mir-tooling-stable-mir-and-ghost-code&quot;&gt;&lt;/a&gt;MIR tooling (stable-mir and ghost-code)&lt;/h3&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2022/02/22/compiler-team-ambitions-2022.html#mir-tooling&quot;&gt;Description from February&lt;/a&gt;&lt;/p&gt;
+&lt;!-- https://hackmd.io/CWcHnbOWReSUyPv0ZDdWaw --&gt;
+&lt;p&gt;&lt;strong&gt;Progress:&lt;/strong&gt; The Rust project has made progress on this ambition since the start of the year, but we do not think this year’s planned goals for this ambition will be achieved in the next six months.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goals:&lt;/strong&gt; We think a solution will be available in the next two years, but not sooner than six months.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it started:&lt;/strong&gt; at start of 2022, we knew a problem existed, but we did not yet have a specific goal in mind for solving the problem.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it’s going:&lt;/strong&gt; we understand the problem better than we did at the start of the year, we have milestones that represent individual units of work for the near term that each make progress towards a solution, and we have Rust contributors who have agreed to help with the units of work that we have identified.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details:&lt;/strong&gt; We have started two initiatives related to MIR: ‘Project Stable MIR’ and the ‘Ghost Code Initiative’, which help address the two biggest currently known pain points for external users of MIR.&lt;/p&gt;
+&lt;p&gt;Project Stable MIR has made initial progress, and has identified key experiments that will enable further work.
+This project has also shown that there are many different (and potentially conflicting) needs for a Stable MIR.&lt;/p&gt;
+&lt;p&gt;The Ghost Code initiative has an initial, high-level plan and volunteer contributors.
+Work has not yet started but the we believe that we have a solution.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#compiler-team-operations-aspirations-️&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;compiler-team-operations-aspirations-️&quot;&gt;&lt;/a&gt;Compiler Team Operations Aspirations (🛠️)&lt;/h3&gt;
+&lt;h4&gt;&lt;a href&#x3D;&quot;#mcve-reduction-tooling&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;mcve-reduction-tooling&quot;&gt;&lt;/a&gt;MCVE reduction tooling&lt;/h4&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2022/02/22/compiler-team-ambitions-2022.html#mcve-reduction-tooling&quot;&gt;Description from February&lt;/a&gt;&lt;/p&gt;
+&lt;!-- https://hackmd.io/@rust-compiler-team/r19rJhmu5 --&gt;
+&lt;p&gt;&lt;strong&gt;Progress:&lt;/strong&gt; The Rust project has not made any progress on this ambition since the start of the year&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goals:&lt;/strong&gt; We had no goals for this ambition planned for this year, and made no progress on the problem it represents
+We think a solution will be available in the next two years, but not sooner than six months.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it started:&lt;/strong&gt; At start of 2022, we knew a problem existed, but we did not yet have a specific goal in mind for solving the problem.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it&#x27;s going:&lt;/strong&gt; We would like help deciding what to do next&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details:&lt;/strong&gt; @pnkfelix continues to think that Rust-specific tooling to help contributors with MCVE reduction could be a real boon to the project.
+However, they have not dedicated any time to solving the problem.&lt;/p&gt;
+&lt;h4&gt;&lt;a href&#x3D;&quot;#performance-dashboard&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;performance-dashboard&quot;&gt;&lt;/a&gt;Performance Dashboard&lt;/h4&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2022/02/22/compiler-team-ambitions-2022.html#performance-dashboard&quot;&gt;Description from February&lt;/a&gt;&lt;/p&gt;
+&lt;!-- https://hackmd.io/@rust-compiler-team/SyaDJ2X_5 --&gt;
+&lt;p&gt;&lt;strong&gt;Progress:&lt;/strong&gt; The Rust project has made progress on this ambition since the start of the year&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goals:&lt;/strong&gt; We had no concrete goals for the dashboard, and representing performance is
+still a hard problem. @rylev thinks we are unlikely to achieve any significant
+milestones in the next 6 months, largely due to lack of clear ideas for solid
+improvements or bandwidth to experiment.&lt;/p&gt;
+&lt;p&gt;We do think the most important parts of a solution will be available in the next six months.
+We do not think a complete solution will be achieved in the next two years, but we do think it is a solvable problem
+rylev thinks that the real question here is when this becomes something that’s funded and someone wants to focus their work on; that might be never: we’re in an OK state today, but I do think we can do much better (and would likely get some mileage out of it). We’re probably already 75-80% of a ‘perfect’ solution though, I suspect.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it started:&lt;/strong&gt; at start of 2022, we knew a problem existed, but we did not yet have a specific goal in mind for solving the problem.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it&#x27;s going:&lt;/strong&gt; we would like help deciding what to do next
+@rylev also wants to emphasize that the largest problem in this domain is room and bandwidth for experimentation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details:&lt;/strong&gt; We’re reporting on a few additional metrics in PRs now (cycles, RSS). It’s not really a surprise, but the significant challenge we’ve definitely run into is our audience has such a diverse set of needs that any single representation or comment is likely to be too information dense to be useful; we’re still figuring out how to make the most of the data we have.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Regarding new contributors:&lt;/strong&gt; We’ve had a few folks return to contributing this year (@nnethercote, @lqd), and @rylev believes one new person as well (@Kobzol). There have been a few others with good contributions but not long-duration tenure.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Regarding prioritization and focus:&lt;/strong&gt; Other infrastructure projects have drawn much of @Mark-Simulacrum&#x27;s attention (crater, triagebot) in the last few months.
+We had long-standing debt on Crater and triagebot that needed to be addressed, and performance work was (and is) seeing more investment from other folks so was in less need of direct attention.&lt;/p&gt;
+&lt;p&gt;@rylev believes that compiler performance remains, in their opinion, the largest and most persistent problem for Rust.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#compiler-backend-aspirations-️-&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;compiler-backend-aspirations-️-&quot;&gt;&lt;/a&gt;Compiler Backend Aspirations (🛠️, 👩‍💻)&lt;/h3&gt;
+&lt;h4&gt;&lt;a href&#x3D;&quot;#ease-writing-new-backends-via-intrinsic-mir-fallbacks&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;ease-writing-new-backends-via-intrinsic-mir-fallbacks&quot;&gt;&lt;/a&gt;Ease writing new backends via intrinsic MIR fallbacks&lt;/h4&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2022/02/22/compiler-team-ambitions-2022.html#ease-writing-new-backends&quot;&gt;Description from February&lt;/a&gt;&lt;/p&gt;
+&lt;!-- https://hackmd.io/@rust-compiler-team/HylMg2m_9 --&gt;
+&lt;p&gt;&lt;strong&gt;Progress:&lt;/strong&gt; The Rust project has made progress on this ambition since the start of the year&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goals:&lt;/strong&gt; We had no goals for this ambition planned for this year, but we made ad-hoc progress on the problem itself.
+We think a solution will be available in the next two years, but not sooner than six months.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it started:&lt;/strong&gt; At start of 2022, we had a solution or goal in mind, but did not have a plan for how to achieve it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it&#x27;s going:&lt;/strong&gt; We would like help deciding what to do next. Also, it would be wonderful to get
+mentoring instructions (even just a sketch of them) so that non-experts could
+help make progress on this&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details:&lt;/strong&gt; While we’ve technically made non-zero progress, it’s minimal and unstructured.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Regarding new contributors:&lt;/strong&gt; There are no contributors who have or had committed to making progress on this. A compiler team member did make a step forward on this at one point, but they are unsurprisingly busy with other things.&lt;/p&gt;
+&lt;p&gt;Mentoring instructions, or even steps with minimal details, might help non-experts pick up work in the area.&lt;/p&gt;
+&lt;h4&gt;&lt;a href&#x3D;&quot;#cranelift&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;cranelift&quot;&gt;&lt;/a&gt;Cranelift&lt;/h4&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2022/02/22/compiler-team-ambitions-2022.html#cranelift&quot;&gt;Description from February&lt;/a&gt;&lt;/p&gt;
+&lt;!-- https://hackmd.io/@rust-compiler-team/BJLre2Xu9 --&gt;
+&lt;p&gt;&lt;strong&gt;Progress:&lt;/strong&gt; The Rust project has made progress on this ambition since the start of the year.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goals:&lt;/strong&gt; We had no goals for this ambition planned for this year, but we made ad-hoc progress on the problem itself.
+With regards to the overall problem: In terms of getting cg_clif distributed with rustup, @bjorn3 thinks 6 months is feasible. In terms of implementing all missing rust features they think it will take longer.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it started:&lt;/strong&gt; at start of 2022, we had a plan, some of which had been completed, but more work remained to be done.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it&#x27;s going:&lt;/strong&gt; we have a high-level end-to-end plan to solve the problem, and we have completed some of our milestones.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Regarding new contributors:&lt;/strong&gt; There have been a couple minor PR’s. There has also been someone potentially interested in contributing more, but given that most of the low hanging fruit has already been done by @bjorn3, they were not able to help the newcomer find an area to contribute to.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Regarding prioritization and focus:&lt;/strong&gt; @bjorn3 has kept their focus on &lt;code&gt;cg_clif&lt;/code&gt; and rustc PR’s that are related to &lt;code&gt;cg_clif&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If @bjorn3 hadn’t started working on &lt;code&gt;cg_clif&lt;/code&gt; they probably wouldn’t have gained as much knowledge of the inner workings of rustc as they have now, nor contributed much to rustc. There are some more architectural changes that they want to make to rustc, but they probably wouldn’t get to them in the near future even if they stopped working on &lt;code&gt;cg_clif&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;With the codegen phase of debug mode builds getting faster with cg_clif in most cases, the bottleneck during debug mode compilation shifts away from codegen to the frontend. @bjorn3 wonders if maybe in the future they could try to see if the performance of the frontend can be improved by the same amount that cranelift improves the backend one way or another?&lt;/p&gt;
+&lt;h4&gt;&lt;a href&#x3D;&quot;#gcc-backend&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;gcc-backend&quot;&gt;&lt;/a&gt;GCC backend&lt;/h4&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2022/02/22/compiler-team-ambitions-2022.html#gcc-backend&quot;&gt;Description from February&lt;/a&gt;&lt;/p&gt;
+&lt;!-- https://hackmd.io/T03Nu92NSLeyyYnnW3XFyg --&gt;
+&lt;p&gt;&lt;strong&gt;Progress:&lt;/strong&gt; The Rust project has made progress on this ambition since the start of the year&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goals:&lt;/strong&gt; we had no goals for this ambition planned for this year, but we made ad-hoc progress on the problem itself
+I believe we’ll be able to ship cg_gcc with rustup within 6 months. Implementing the missing Rust features will take longer.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it started:&lt;/strong&gt; At start of 2022, we had a plan, some of which had been completed, but more work remained to be done.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it&#x27;s going:&lt;/strong&gt; We have a high-level end-to-end plan to solve the problem
+and  we have completed some of our milestones&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Good support of 128-bit integers on platforms that don&#x27;t support them.&lt;/li&gt;
+&lt;li&gt;Good support of SIMD intrinsics and target-specific builtins.&lt;/li&gt;
+&lt;li&gt;The GCC codegen can now bootstrap rustc.&lt;/li&gt;
+&lt;li&gt;Added support for packed structs.&lt;/li&gt;
+&lt;li&gt;Preparation for a future distribution via rustup with a feature flag allowing to use upstream libgccjit 12.&lt;/li&gt;
+&lt;li&gt;Many bug fixes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Regarding new contributors:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We got around 5 new contributors.&lt;/li&gt;
+&lt;li&gt;Around 3 stuck around.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Regarding prioritization and focus:&lt;/strong&gt; @antoyo says some importants things we&#x27;re not doing because we focus on this project is making the rustc_codegen_ssa API more convenient for the backends other than LLVM. That&#x27;s something they eventually want to work on.&lt;/p&gt;
+&lt;p&gt;When the GCC backend is good enough and when the Rust for Linux project is ready to start experimenting with it, it might be worth it to help other areas support new architectures for Rust: adding the arch specs to rustc, adding the support for those architectures in some crates like &lt;code&gt;libc&lt;/code&gt; and &lt;code&gt;object&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#diagnostics-aspirations-&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;diagnostics-aspirations-&quot;&gt;&lt;/a&gt;Diagnostics Aspirations (👩‍💻)&lt;/h3&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2022/02/22/compiler-team-ambitions-2022.html#diagnostics-aspirations-&quot;&gt;Description from February&lt;/a&gt;&lt;/p&gt;
+&lt;!-- https://hackmd.io/@rust-compiler-team/HJ_cgnXd5 --&gt;
+&lt;p&gt;&lt;strong&gt;Progress:&lt;/strong&gt; The Rust project has made progress on this ambition since the start of the year&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goals:&lt;/strong&gt; we didn’t have “planned goals” for the year, but we did accomplish lots of incremental improvements and started the translation infrastructure which has been in our wishlist for years.
+we think our chosen problem is never-ending and will never be “resolved”;
+there is specific feature and integration work that can be tackled in bounded amount of times, but the improvement of diagnostics is a fractal one, and every time we raise the bar, the expectation of our users increases and our increased experience makes us attempt bolder things.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it started:&lt;/strong&gt; at start of 2022, we knew some problems existed, but we did not yet have a specific goal in mind for solving all such problems.
+for other problems, we had a plan for how to achieve a specific goal, but we did not have intermediate progress points (aka “milestones”) established.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it&#x27;s going:&lt;/strong&gt; we understand the problem better than we did at the start of the year
+we have a high-level end-to-end plan to solve the problem
+we have milestones that represent individual units of work for the near term that each make progress towards a solution
+we have Rust contributors who have agreed to help with the units of work that we have identified.
+Further more, some of our work has reached Rust programmers; in some cases, we do not know if it has improved Rust for them,
+and in other cases, what we learn of their usage is informing our plans going forward&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details:&lt;/strong&gt; wg-diagnostics isn&#x27;t as structured as it could be, which translates to work being taken on piecemeal by individuals at their own pace and leisure. This affects the size of projects that we can tackle, &lt;em&gt;but&lt;/em&gt; still relatively big projects, like the &lt;a href&#x3D;&quot;https://hackmd.io/@davidtwco/rkXSbLg95&quot;&gt;translation machinery&lt;/a&gt; were started and have enough momentum to make progress going forward.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Regarding new contributors:&lt;/strong&gt; @estebank hasn&#x27;t quantified it, but we&#x27;ve had quite a few new contributors recently. Mentoring capacity isn&#x27;t depleted, &lt;em&gt;but&lt;/em&gt; if we wanted to increase the number of people contributing we will need more people. The mentoring needs have been highly variable, depending on the individual (and the complexity of the task they take on).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Regarding prioritization and focus:&lt;/strong&gt; @estebank has seen people come contribute a handful of PRs and disappear, but has not dug deeper into their reasons.&lt;/p&gt;
+&lt;p&gt;The most common thing is people picking up a project that’s too advanced for them, which demotivates them. We try to both steer them away beforehands and to closely mentor them as they work on things. A cleaner codebase with more machinery for non-standard things (like typechecking opportunistically in the parser, to give an example of something impossible to do today) would allow some of the things people have tried to be done by almost anyone.&lt;/p&gt;
+&lt;p&gt;@estebank believes that diagnostics are super important and everyone&#x27;s concern. Efforts like librarification could unblock very powerful heuristics to massively improve our user experience here, but such a project &lt;em&gt;shouldn&#x27;t&lt;/em&gt; be started &lt;em&gt;only&lt;/em&gt; for diagnostics improvements (as there&#x27;s plenty of things to do already).&lt;/p&gt;
+&lt;p&gt;What would make @estebank change their focus to something else? Simply put: Seeing no one complain about how hard Rust is to learn and seeing absolutely no new &amp;quot;confusing errors&amp;quot; complaints.&lt;/p&gt;
+&lt;p&gt;These complaints have dramatically lowered in the last couple of years, but we&#x27;re not quite there yet. There&#x27;s also diminishing returns every time we focus on narrower and narrower cases, but making the experience of hitting an extreme corner case a positive one has a knock down effect on how pleasurable the overall experience is: if you&#x27;re riding a bike in a segregated bike path for miles, but there are 200 yards in the middle where you have to share the road with trucks, the overall experience feels dangerous. Having great E0308 errors is nice for 90% of the cases, but if someone who&#x27;s trying to push the limits of what can be represented with trait bounds is constantly fighting the compiler (or worse, their users are!), then the experience is soured.&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#conclusion&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;conclusion&quot;&gt;&lt;/a&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;So, that&#x27;s the midyear update for T-compiler.&lt;/p&gt;
+&lt;p&gt;I have one final thought before I sign off on this blog post: my approach this
+year for describing our ambitions was very &amp;quot;bottom-up&amp;quot;: I surveyed all of the
+compiler team and contributors, seeking a full list of everything that was going
+on, and everything that we hoped other people might want to help with.&lt;/p&gt;
+&lt;p&gt;In hindsight, it is a huge list. Furthermore, I did not provide much guidance as
+to how I would want these items prioritized. (I had my own pet projects, such as
+MCVE reduction, but if anything I &lt;em&gt;deprioritized&lt;/em&gt; those.)&lt;/p&gt;
+&lt;p&gt;My reasoning at that time was that by going broad with the presentation, we
+would be more likely to attract newcomers who would say &amp;quot;oh, &lt;em&gt;that&lt;/em&gt; thing sounds
+like something I could help with&amp;quot;; especially by given examples of projects that
+don&#x27;t actually require deep knowledge of rustc&#x27;s implementation. But I do not
+think that experiment worked out overall.&lt;/p&gt;
+&lt;p&gt;There are some things, like Async Traits and Generic Associated Types, that are
+hugely important, but nonetheless the implementation effort is falling on the
+shoulders of relatively few people. I think in the future, I would like to try
+to get the team and contributors to be a little more focused. E.g. maybe try to
+convince people to put aside work on ambition A, in order to get more people
+working together on ambition B, and then later there will (hopefully) be more
+capacity to address A after B has been addressed. But, since this is open
+source, it&#x27;s very much a matter of how much excitement each ambition can build up
+around its particular project, and how attractive they can make contribution be
+to newcomers.&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#faq&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;faq&quot;&gt;&lt;/a&gt;FAQ&lt;/h2&gt;
+&lt;h4&gt;&lt;a href&#x3D;&quot;#how-can-i-contact-an-items-owners-or-sponsor-their-work-on-rust&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;how-can-i-contact-an-items-owners-or-sponsor-their-work-on-rust&quot;&gt;&lt;/a&gt;How can I contact an item&#x27;s owners or sponsor their work on Rust?&lt;/h4&gt;
+&lt;p&gt;This table lists the item owners mentioned above, their &lt;a href&#x3D;&quot;https://rust-lang.zulipchat.com/&quot;&gt;Zulip&lt;/a&gt; username and if they are accepting sponsorships to help them work on Rust:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Owner&lt;/th&gt;
+&lt;th&gt;Zulip Username&lt;/th&gt;
+&lt;th&gt;Accepting sponsorships?&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://github.com/Aaron1011&quot;&gt;Aaron Hill&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;@Aaron Hill&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://github.com/antoyo&quot;&gt;antoyo&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;@antoyo&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Yes: &lt;a href&#x3D;&quot;https://github.com/sponsors/antoyo&quot;&gt;GitHub Sponsors&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://github.com/apiraino&quot;&gt;apiraino&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;@apiraino&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://github.com/bjorn3&quot;&gt;bjorn3&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;@bjorn3&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Yes: &lt;a href&#x3D;&quot;https://liberapay.com/bjorn3&quot;&gt;Liberapay&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://github.com/cjgillot&quot;&gt;cjgillot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;@cjgillot&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://github.com/davidtwco&quot;&gt;davidtwco&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;@davidtwco&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;No: works on Rust at Huawei R&amp;amp;D UK&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://github.com/estebank&quot;&gt;estebank&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;@Esteban Küber&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;No: works on Rust at Amazon Web Services&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://github.com/jackh726&quot;&gt;jackh726&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;@Jack Huey&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://github.com/jswrenn&quot;&gt;jswrenn&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;@Jack Wrenn&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;No: works on Rust at Amazon Web Services&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://github.com/lcnr&quot;&gt;lcnr&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;@lcnr&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Yes: &lt;a href&#x3D;&quot;https://lcnr.de/funding/&quot;&gt;https://lcnr.de/funding/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://github.com/lqd&quot;&gt;lqd&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;@lqd&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;No: sponsored by the Internet Security Research Group&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://github.com/Mark-Simulacrum&quot;&gt;Mark-Simulacrum&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;@simulacrum&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://github.com/michaelwoerister&quot;&gt;michaelwoerister&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;@mw&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;No: works on Rust at Microsoft&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://github.com/nikomatsakis&quot;&gt;nikomatsakis&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;@nikomatsakis&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;No: works on Rust at Amazon Web Services&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://github.com/nnethercote&quot;&gt;nnethercote&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;@nnethercote&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;No: works on Rust at Futurewei&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://github.com/oli-obk&quot;&gt;oli-obk&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;@oli&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;No: works on Rust at Amazon Web Services&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://github.com/pnkfelix&quot;&gt;pnkfelix&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;@pnkfelix&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;No: works on Rust at Amazon Web Services&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://github.com/rylev&quot;&gt;rylev&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;@rylev&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;No: works on Rust at Microsoft&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://github.com/scottmcm&quot;&gt;scottmcm&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;@scottmcm&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://github.com/tmandry&quot;&gt;tmandry&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;@tmandry&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;No: works on Rust at Google&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://github.com/wesleywiser&quot;&gt;wesleywiser&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;@Wesley Wiser&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;No: works on Rust at Microsoft&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://github.com/xldenis&quot;&gt;xldenis&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;@Xavier Denis&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;!-- [antoyo zulip PM]: https://rust-lang.zulipchat.com/#narrow/pm-with/404242-user404242 --&gt; &lt;!-- @**antoyo** --&gt;
+&lt;!-- antoyo sponsorship: https://github.com/sponsors/antoyo --&gt;
+&lt;!-- [Aaron Hill zulip PM]: https://rust-lang.zulipchat.com/#narrow/pm-with/116083-user116083 --&gt; &lt;!-- @**Aaron Hill** --&gt;
+&lt;!-- Aaron1011: no affiliation --&gt;
+&lt;!-- [bjorn3 zulip PM]: https://rust-lang.zulipchat.com/#narrow/pm-with/133247-user133247 --&gt; &lt;!-- @**bjorn3**  --&gt;
+&lt;!-- bjorn3 donation page: https://liberapay.com/bjorn3 --&gt;
+&lt;!-- [cjgillot zulip PM]: https://rust-lang.zulipchat.com/#narrow/pm-with/248906-user248906 --&gt; &lt;!-- @**cjgillot**  --&gt;
+&lt;!-- no response from cjgillot re affiliation yet --&gt;
+&lt;!-- [davidtwco zulip PM]: https://rust-lang.zulipchat.com/#narrow/pm-with/248906-user248906 --&gt; &lt;!-- @**davidtwco**  --&gt;
+&lt;!-- davidtwco affiliation: &quot;Huawei R&amp;D UK&quot;--&gt;
+&lt;!-- [estebank zulip PM]: https://rust-lang.zulipchat.com/#narrow/pm-with/119031-user119031 --&gt; &lt;!-- @**Esteban Küber** --&gt;
+&lt;!-- estebank affiliation: AWS --&gt;
+&lt;!-- [lcnr zulip PM]: https://rust-lang.zulipchat.com/#narrow/pm-with/216206-user216206 --&gt; &lt;!-- @**lcnr** --&gt;
+&lt;!-- lcnr sponsorship: https://lcnr.de/funding/ --&gt;
+&lt;!-- [michaelwoerister zulip PM]: https://rust-lang.zulipchat.com/#narrow/pm-with/124287-user124287 --&gt; &lt;!-- @**mw** --&gt;
+&lt;!-- michaelwoerister affiliation: MS --&gt;
+&lt;!-- [nikomatsakis zulip PM]: https://rust-lang.zulipchat.com/#narrow/pm-with/116009-user116009 --&gt; &lt;!-- @**nikomatsakis** --&gt;
+&lt;!-- nikomatsakis affiliation: AWS --&gt;
+&lt;!-- [oli-obk zulip PM]: https://rust-lang.zulipchat.com/#narrow/pm-with/124288-user124288 --&gt; &lt;!-- @**oli** --&gt;
+&lt;!-- oli affiliation: AWS --&gt;
+&lt;!-- [jackh726 zulip PM]: https://rust-lang.zulipchat.com/#narrow/pm-with/232957-user232957 --&gt; &lt;!-- @**Jack Huey** --&gt;
+&lt;!-- jackh726: no affiliation --&gt;
+&lt;!-- [lqd zulip PM]: https://rust-lang.zulipchat.com/#narrow/pm-with/116113-user116113 --&gt; &lt;!-- @**lqd**  --&gt;
+&lt;!-- lqd affiliation: ISRG --&gt;
+&lt;!-- [nnethercote zulip PM]: https://rust-lang.zulipchat.com/#narrow/pm-with/120989-user120989 --&gt; &lt;!-- @**nnethercote**  --&gt;
+&lt;!-- nnethercote affiliation: Futurewei --&gt;
+&lt;!-- [tmandry zulip PM]: https://rust-lang.zulipchat.com/#narrow/pm-with/116883-user116883 --&gt; &lt;!-- @**tmandry**  --&gt;
+&lt;!-- tmandry affiliation: Google (TBD) --&gt;
+&lt;!-- [scottmcm zulip PM]: https://rust-lang.zulipchat.com/#narrow/pm-with/125270-user125270 --&gt; &lt;!-- @**scottmcm**  --&gt;
+&lt;!-- scottmcm: no affiliation --&gt;
+&lt;!-- [pnkfelix zulip PM]: https://rust-lang.zulipchat.com/#narrow/pm-with/116083-user116083  --&gt; &lt;!-- @**pnkfelix**  --&gt;
+&lt;!-- pnkfelix affiliation: AWS --&gt;
+&lt;!-- [wesleywiser zulip PM]: https://rust-lang.zulipchat.com/#narrow/pm-with/125250-user125250 --&gt; &lt;!-- @**Wesley Wiser**  --&gt;
+&lt;!-- wesleywiser affiliation: MS --&gt;
+&lt;!-- [jswrenn zulip PM]: https://rust-lang.zulipchat.com/#narrow/pm-with/219211-user219211 --&gt; &lt;!-- @**Jack Wrenn** --&gt;
+&lt;!-- jswrenn affiliation: AWS --&gt;
+&lt;!-- [apiraino zulip PM]: https://rust-lang.zulipchat.com/#narrow/pm-with/250987-user250987 --&gt; &lt;!-- @**apiraino**  --&gt;
+&lt;!-- apiraino: no affiliation --&gt;
+&lt;!-- [simulacrum zulip PM]: https://rust-lang.zulipchat.com/#narrow/pm-with/116122-user116122 --&gt; &lt;!-- @**simulacrum**  --&gt;
+&lt;!-- simulacrum sponsorship: https://github.com/sponsors/Mark-Simulacrum --&gt;
+&lt;!-- [rylev zulip PM]: https://rust-lang.zulipchat.com/#narrow/pm-with/224872-user224872 --&gt; &lt;!-- @**rylev**  --&gt;
+&lt;!-- rylev affiliation: MS --&gt;
+&lt;!-- [xldenis zulip PM]: https://rust-lang.zulipchat.com/#narrow/pm-with/312719-user312719 --&gt; &lt;!-- @**Xavier Denis**  --&gt;
+&lt;section class&#x3D;&quot;footnotes&quot;&gt;
+&lt;ol&gt;
+&lt;li id&#x3D;&quot;fn1&quot;&gt;
+&lt;p&gt;Source code for generating the table rows is at this &lt;a href&#x3D;&quot;https://gist.github.com/pnkfelix/dc4b6875dd31fbf4e0864d8b7dba8dc6&quot;&gt;gist&lt;/a&gt; &lt;a href&#x3D;&quot;#fnref1&quot; class&#x3D;&quot;footnote-backref&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+
+        <author>
+            <name>Felix Klock, Wesley Wiser</name>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>Announcing the Keyword Generics Initiative</title>
+        <link rel="alternate" href="https://blog.rust-lang.org/inside-rust/2022/07/27/keyword-generics.html" type="text/html" title="Announcing the Keyword Generics Initiative" />
+        <published>2022-07-27T00:00:00+00:00</published>
+        <updated>2022-07-27T00:00:00+00:00</updated>
+        <id>https://blog.rust-lang.org/inside-rust/2022/07/27/keyword-generics.html</id>
+        <content type="html" xml:base="https://blog.rust-lang.org/inside-rust/2022/07/27/keyword-generics.html">&lt;p&gt;We (&lt;a href&#x3D;&quot;https://github.com/oli-obk&quot;&gt;Oli&lt;/a&gt;, &lt;a href&#x3D;&quot;https://github.com/nikomatsakis&quot;&gt;Niko&lt;/a&gt;, and &lt;a href&#x3D;&quot;https://github.com/yoshuawuyts&quot;&gt;Yosh&lt;/a&gt;) are excited to announce the start of the &lt;a href&#x3D;&quot;https://github.com/rust-lang/keyword-generics-initiative&quot;&gt;Keyword
+Generics Initiative&lt;/a&gt;, a new initiative &lt;sup class&#x3D;&quot;footnote-ref&quot;&gt;&lt;a href&#x3D;&quot;#fn1&quot; id&#x3D;&quot;fnref1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; under the purview of
+the language team. We&#x27;re officially just a few weeks old now, and in this post
+we want to briefly share why we&#x27;ve started this initiative, and share some
+insight on what we&#x27;re about.&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#a-missing-kind-of-generic&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;a-missing-kind-of-generic&quot;&gt;&lt;/a&gt;A missing kind of generic&lt;/h2&gt;
+&lt;p&gt;One of Rust&#x27;s defining features is the ability to write functions which are
+&lt;em&gt;generic&lt;/em&gt; over their input types. That allows us to write a function once,
+leaving it up to the compiler to generate the right implementations for us.&lt;/p&gt;
+&lt;p&gt;Rust allows you to be generic over types - it does not allow you to be generic
+over other things that are usually specified by keywords. For example, whether a
+function is async, whether a function can fail or not, whether a function is
+const or not, etc.&lt;/p&gt;
+&lt;p&gt;The post &lt;a href&#x3D;&quot;https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/&quot;&gt;&amp;quot;What color is your function&amp;quot;&lt;/a&gt; &lt;sup class&#x3D;&quot;footnote-ref&quot;&gt;&lt;a href&#x3D;&quot;#fn2&quot; id&#x3D;&quot;fnref2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; describes what happens
+when a language introduces async functions, but with no way to be generic over
+them:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Our results provide evidence that npm suffers from single points of failure and that unmaintained packages threaten large code bases&lt;/p&gt;
+&lt;p&gt;I will take async-await over bare callbacks or futures any day of the week.
+But we’re lying to ourselves if we think all of our troubles are gone. As soon
+as you start trying to write higher-order functions, or reuse code, you’re
+right back to realizing color is still there, bleeding all over your codebase.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Rust is in a similar boat with some high profile crates, &lt;a href=&quot;https://github.com/Stebalien/term/issues/93&quot;&gt;such as the &lt;code&gt;term&lt;/code&gt; crate&lt;/a&gt; (downloaded 8,000 times a day), are unmaintained. By &lt;a href=&quot;https://github.com/RustSec/advisory-db/issues/173&quot;&gt;tracking information about unmaintained crates in the RustSec Advisory Database&lt;/a&gt;, we hope to improve visibility on these crates, either by helping people discover &amp;quot;successor&amp;quot; crates they should switch to, or putting potential volunteer maintainers in touch with authors interested in handing crates off. When those handoffs happen, we can mark unmaintained crate advisories as obsolete (while still giving interested security researchers a list of crates to keep an eye on for potential &lt;a href=&quot;https://blog.npmjs.org/post/180565383195/details-about-the-event-stream-incident&quot;&gt;software supply chain attacks&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;If you have an unmaintained crate you'd like us to create an advisory for, or know of a third party unmaintained crate and would like to provide information about potential alternatives, please &lt;a href=&quot;https://github.com/RustSec/advisory-db/issues/173&quot;&gt;leave a comment in the RustSec/advisory-db#173 GitHub issue&lt;/a&gt; and we can file an advisory for it.&lt;/p&gt;
-&lt;p&gt;For now, unmaintained crates are surfaced as warnings, with some brief information available about each one and a link to click to read more. If you'd like for unmaintained crate advisories to be considered errors (so &lt;code&gt;cargo-audit&lt;/code&gt; exits with a non-zero status for e.g. CI purposes), run:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ cargo audit -D
+&lt;p&gt;This isn&#x27;t just limited to async though, it applies to all modifier keywords -
+including ones we may define in the future. So we&#x27;re looking to fill that gap
+by exploring something we call &amp;quot;keyword generics&amp;quot; &lt;sup class&#x3D;&quot;footnote-ref&quot;&gt;&lt;a href&#x3D;&quot;#fn3&quot; id&#x3D;&quot;fnref3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;: the ability to be
+generic over keywords such as &lt;code&gt;const&lt;/code&gt; and &lt;code&gt;async&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;To give you a quick taste of what we&#x27;re working on, this is roughly how we
+imagine you may be able to write a function which is generic over &amp;quot;asyncness&amp;quot;
+in the future:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Please note that this syntax is entirely made up, just so we can use something
+in examples. Before we can work on syntax we need to finalize the semantics,
+and we&#x27;re not there yet. This means the syntax will likely be subject to
+change over time.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-rust&quot;&gt;async&amp;lt;A&amp;gt; trait Read {
+    async&amp;lt;A&amp;gt; fn read(&amp;amp;mut self, buf: &amp;amp;mut [u8]) -&amp;gt; Result&amp;lt;usize&amp;gt;;
+    async&amp;lt;A&amp;gt; fn read_to_string(&amp;amp;mut self, buf: &amp;amp;mut String) -&amp;gt; Result&amp;lt;usize&amp;gt; { ... }
+}
+
+/// Read from a reader into a string.
+async&amp;lt;A&amp;gt; fn read_to_string(reader: &amp;amp;mut impl Read * A) -&amp;gt; std::io::Result&amp;lt;String&amp;gt; {
+    let mut string &#x3D; String::new();
+    reader.read_to_string(&amp;amp;mut string).await?;
+    string
+}
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;or if you prefer to be more explicit:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ cargo audit --deny-warnings
+&lt;p&gt;This function introduces a &amp;quot;keyword generic&amp;quot; parameter into the function of &lt;code&gt;A&lt;/code&gt;.
+You can think of this as a flag which indicates whether the function is being
+compiled in an async context or not. The parameter &lt;code&gt;A&lt;/code&gt; is forwarded to the &lt;code&gt;impl Read&lt;/code&gt;, making that conditional on &amp;quot;asyncness&amp;quot; as well.&lt;/p&gt;
+&lt;p&gt;In the function body you can see a &lt;code&gt;.await&lt;/code&gt; call. Because &lt;a href&#x3D;&quot;https://blog.yoshuawuyts.com/async-cancellation-1/&quot;&gt;the &lt;code&gt;.await&lt;/code&gt; keyword
+marks cancellation sites&lt;/a&gt; we unfortunately can&#x27;t just infer them
+&lt;sup class&#x3D;&quot;footnote-ref&quot;&gt;&lt;a href&#x3D;&quot;#fn4&quot; id&#x3D;&quot;fnref4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;. Instead we require them to be written for when the code is
+compiled in async mode, but are essentially reduced to a no-op in non-async
+mode.&lt;/p&gt;
+&lt;p&gt;We still have lots of details left to figure out, but we hope this at least
+shows the general &lt;em&gt;feel&lt;/em&gt; of what we&#x27;re going for.&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#a-peek-at-the-past-horrors-before-const&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;a-peek-at-the-past-horrors-before-const&quot;&gt;&lt;/a&gt;A peek at the past: horrors before const&lt;/h2&gt;
+&lt;p&gt;Rust didn&#x27;t always have &lt;code&gt;const fn&lt;/code&gt; as part of the language. A long long long long
+long time ago (2018) we had to write a regular function for runtime computations
+and associated const of generic type logic for compile-time computations. As an
+example, to add the number &lt;code&gt;1&lt;/code&gt; to a constant provided to you, you had to write
+(&lt;a href&#x3D;&quot;https://play.rust-lang.org/?version&#x3D;stable&amp;amp;mode&#x3D;debug&amp;amp;edition&#x3D;2021&amp;amp;gist&#x3D;50e818b79b8af322ed4384d3c33e9773&quot;&gt;playground&lt;/a&gt;):&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-rust&quot;&gt;trait Const&amp;lt;T&amp;gt; {
+    const VAL: T;
+}
+
+/// &#x60;42&#x60; as a &amp;quot;const&amp;quot; (type) generic:
+struct FourtyTwo;
+impl Const&amp;lt;i32&amp;gt; for FourtyTwo {
+    const VAL: i32 &#x3D; 42;
+}
+
+/// &#x60;C&#x60; -&amp;gt; &#x60;C + 1&#x60; operation:
+struct AddOne&amp;lt;C: Const&amp;lt;i32&amp;gt;&amp;gt;(C);
+impl&amp;lt;C: Const&amp;lt;i32&amp;gt;&amp;gt; Const&amp;lt;i32&amp;gt; for AddOne&amp;lt;C&amp;gt; {
+    const VAL: i32 &#x3D; C::VAL + 1;
+}
+
+AddOne::&amp;lt;FourtyTwo&amp;gt;::VAL
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;&lt;a href=&quot;#tracking-rust-language-vulnerabilities&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot; id=&quot;tracking-rust-language-vulnerabilities&quot;&gt;&lt;/a&gt;Tracking Rust language vulnerabilities&lt;/h2&gt;
-&lt;p&gt;Previously the &lt;a href=&quot;https://rustsec.org&quot;&gt;RustSec Advisory Database&lt;/a&gt; only tracked information about vulnerable crates published through &lt;a href=&quot;https://crates.io&quot;&gt;crates.io&lt;/a&gt;. Starting with this release, however, we are also indexing advisories for vulnerabilities in the Rust language's core ecosystem components, including &lt;code&gt;std&lt;/code&gt;, &lt;code&gt;cargo&lt;/code&gt;, and &lt;code&gt;rustdoc&lt;/code&gt;. We've now indexed the following vulnerabilities:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://rustsec.org/advisories/CVE-2018-1000622.html&quot;&gt;CVE-2018-1000622: rustdoc: Uncontrolled search path element vulnerability in rustdoc plugins&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://rustsec.org/advisories/CVE-2018-1000657.html&quot;&gt;CVE-2018-1000657: std: Buffer overflow vulnenrability in &lt;code&gt;VecDeque::reserve()&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://rustsec.org/advisories/CVE-2018-1000810.html&quot;&gt;CVE-2018-1000810: std: Buffer overflow vulnerability in &lt;code&gt;str::repeat()&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://rustsec.org/advisories/CVE-2019-12083.html&quot;&gt;CVE-2019-12083: std: Memory safety vulnerabilities arising from &lt;code&gt;Error::type_id&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://rustsec.org/advisories/CVE-2019-16760.html&quot;&gt;CVE-2019-16760: cargo: Cargo prior to Rust 1.26.0 may download the wrong dependency&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;We are &lt;a href=&quot;https://github.com/RustSec/cargo-audit/issues/140&quot;&gt;interested in potentially surfacing information about these advisories via cargo-audit&lt;/a&gt;, e.g. optionally detecting if the currently active Rust toolchain is vulnerable. If that interests you, we're also looking for help on this issue!&lt;/p&gt;
-&lt;p&gt;Thanks for reading, and we hope you enjoy &lt;code&gt;cargo-audit&lt;/code&gt; 0.9!&lt;/p&gt;
+&lt;p&gt;Today this is as easy as writing a &lt;code&gt;const fn&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-rust&quot;&gt;const fn add_one(i: i32) -&amp;gt; i32 {
+    i + 1
+}
+
+add_one(42)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The interesting part here is that you can also just call this function in
+runtime code, which means the implementation is shared between both &lt;code&gt;const&lt;/code&gt;
+(CTFE&lt;sup class&#x3D;&quot;footnote-ref&quot;&gt;&lt;a href&#x3D;&quot;#fn5&quot; id&#x3D;&quot;fnref5&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;) and non-&lt;code&gt;const&lt;/code&gt; (runtime) contexts.&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#memories-of-the-present-async-today&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;memories-of-the-present-async-today&quot;&gt;&lt;/a&gt;Memories of the present: async today&lt;/h2&gt;
+&lt;p&gt;People write duplicate code for async/non-async with the only difference being
+the &lt;code&gt;async&lt;/code&gt; keyword. A good example of that code today is &lt;a href&#x3D;&quot;https://docs.rs/async-std/latest/async_std/&quot;&gt;&lt;code&gt;async-std&lt;/code&gt;&lt;/a&gt;, which
+duplicates and translates a large part of the stdlib&#x27;s API surface to be async
+&lt;sup class&#x3D;&quot;footnote-ref&quot;&gt;&lt;a href&#x3D;&quot;#fn6&quot; id&#x3D;&quot;fnref6&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;. And because the Async WG has made it an explicit goal to &lt;a href&#x3D;&quot;https://rust-lang.github.io/wg-async/vision/how_it_feels.html&quot;&gt;bring
+async Rust up to par with non-async Rust&lt;/a&gt;, the issue of code
+duplication is particularly relevant for the Async WG as well. Nobody on the
+Async WG seems particularly keen on proposing we add a second instance of just
+about every API currently in the stdlib.&lt;/p&gt;
+&lt;p&gt;We&#x27;re in a similar situation with &lt;code&gt;async&lt;/code&gt; today as &lt;code&gt;const&lt;/code&gt; was prior to 2018.
+Duplicating entire interfaces and wrapping them in &lt;code&gt;block_on&lt;/code&gt; calls is the
+approach taken by e.g. the &lt;code&gt;mongodb&lt;/code&gt;
+[&lt;a href&#x3D;&quot;https://docs.rs/mongodb/latest/mongodb/index.html&quot;&gt;async&lt;/a&gt;,
+&lt;a href&#x3D;&quot;https://docs.rs/mongodb/latest/mongodb/sync/index.html&quot;&gt;non-async&lt;/a&gt;], &lt;code&gt;postgres&lt;/code&gt;
+[&lt;a href&#x3D;&quot;https://docs.rs/tokio-postgres/latest/tokio_postgres/index.html&quot;&gt;async&lt;/a&gt;,
+&lt;a href&#x3D;&quot;https://docs.rs/postgres/latest/postgres/&quot;&gt;non-async&lt;/a&gt;], and &lt;code&gt;reqwest&lt;/code&gt;
+[&lt;a href&#x3D;&quot;https://docs.rs/reqwest/latest/reqwest/&quot;&gt;async&lt;/a&gt;,
+&lt;a href&#x3D;&quot;https://docs.rs/reqwest/latest/reqwest/blocking/index.html&quot;&gt;non-async&lt;/a&gt;] crates:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-rust&quot;&gt;// Async functionality like this would typically be exposed from a crate &amp;quot;foo&amp;quot;:
+async fn bar() -&amp;gt; Bar { 
+    // async implementation goes here
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-rust&quot;&gt;// And a sync counterpart would typically be exposed from a crate
+// named &amp;quot;blocking_foo&amp;quot; or a submodule on the original crate as
+// &amp;quot;foo::blocking&amp;quot;. This wraps the async code in a &#x60;block_on&#x60; call:
+fn bar() -&amp;gt; Bar {
+    futures::executor::block_on(foo::bar())
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This situation is not ideal. Instead of using the host&#x27;s synchronous syscalls,
+we&#x27;re now going through an async runtime to get the same results - something
+which is often not zero-cost. But more importantly, it&#x27;s rather hard to
+keep both a sync and async API version of the same crate in, err, sync with each
+other. Without automation it&#x27;s really easy for the two APIs to get out of sync,
+leading to mismatched functionality.&lt;/p&gt;
+&lt;p&gt;The ecosystem has come up with some solutions to this, perhaps most notably the
+proc-macro based &lt;a href&#x3D;&quot;https://docs.rs/maybe-async/0.2.6/maybe_async/&quot;&gt;&lt;code&gt;maybe-async&lt;/code&gt; crate&lt;/a&gt;.  Instead of writing two
+separate copies of &lt;code&gt;foo&lt;/code&gt;, it generates a sync and async variant for you:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-rust&quot;&gt;#[maybe_async]
+async fn foo() -&amp;gt; Bar { ... }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;While being useful, the macro has clear limitations with respect to diagnostics
+and ergonomics. That&#x27;s absolutely not an issue with the crate, but an inherent
+property of the problem it&#x27;s trying to solve. Implementing a way to be generic
+over the &lt;code&gt;async&lt;/code&gt; keyword is something which will affect the language in many
+ways, and a type system + compiler will be better equipped to handle it than
+proc macros reasonably can.&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#a-taste-of-trouble-the-sandwich-problem&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;a-taste-of-trouble-the-sandwich-problem&quot;&gt;&lt;/a&gt;A taste of trouble: the sandwich problem&lt;/h2&gt;
+&lt;p&gt;A pervasive issue in existing Rust is the &lt;em&gt;sandwich&lt;/em&gt; problem. It occurs when a
+type passed into an operation wants to perform control flow not supported by the
+type it&#x27;s passed into. Thus creating a &lt;em&gt;sandwich&lt;/em&gt; &lt;sup class&#x3D;&quot;footnote-ref&quot;&gt;&lt;a href&#x3D;&quot;#fn7&quot; id&#x3D;&quot;fnref7&quot;&gt;7&lt;/a&gt;&lt;/sup&gt; The classic example
+is a &lt;code&gt;map&lt;/code&gt; operation:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-rust&quot;&gt;enum Option&amp;lt;T&amp;gt; {
+    Some(T),
+    None,
+}
+
+impl&amp;lt;T&amp;gt; Option&amp;lt;T&amp;gt; {
+    fn map&amp;lt;J&amp;gt;(self, f: impl FnOnce(T) -&amp;gt; J) -&amp;gt; Option&amp;lt;J&amp;gt; { ... }
+}
+
+my_option.map(|x| x.await)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will produce a compiler error: the closure &lt;code&gt;f&lt;/code&gt; is not an async context, so
+&lt;code&gt;.await&lt;/code&gt; cannot be used within it. And we can&#x27;t just convert the closure to be
+&lt;code&gt;async&lt;/code&gt; either, since &lt;code&gt;fn map&lt;/code&gt; doesn&#x27;t know how to call async functions. In
+order to solve this issue, we could provide a new &lt;code&gt;async_map&lt;/code&gt; method which
+&lt;em&gt;does&lt;/em&gt; provide an async closure. But we may want to repeat those for more
+effects, and that would result in a combinatorial explosion of effects. Take for
+example &amp;quot;can fail&amp;quot; and &amp;quot;can be async&amp;quot;:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;not async&lt;/th&gt;
+&lt;th&gt;async&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;infallible&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;fn map&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;fn async_map&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;fallible&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;fn try_map&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;fn async_try_map&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;That&#x27;s a lot of API surface for just a single method, and &lt;strong&gt;that problem
+multiplies across the entire API surface in the stdlib&lt;/strong&gt;. We expect that once we
+start applying &amp;quot;keyword generics&amp;quot; to traits, we will be able to solve the
+sandwich problem. The type &lt;code&gt;f&lt;/code&gt; would be marked generic over a set of effects,
+and the compiler would choose the right variant during compilation.&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#affecting-all-effects&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;affecting-all-effects&quot;&gt;&lt;/a&gt;Affecting all effects&lt;/h2&gt;
+&lt;p&gt;Both &lt;code&gt;const&lt;/code&gt; and &lt;code&gt;async&lt;/code&gt; share a very similar issue, and we expect that other
+&amp;quot;effects&amp;quot; will face the same issue. &amp;quot;fallibility&amp;quot; is particularly on our mind here,
+but it isn&#x27;t the only effect. In order for the language to feel consistent we
+need consistent solutions.&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#faq&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;faq&quot;&gt;&lt;/a&gt;FAQ&lt;/h2&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#q-is-there-an-rfc-available-to-read&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;q-is-there-an-rfc-available-to-read&quot;&gt;&lt;/a&gt;Q: Is there an RFC available to read?&lt;/h3&gt;
+&lt;p&gt;Rust initiatives are intended for &lt;em&gt;exploration&lt;/em&gt;. The announcement of the Keyword
+Generics Initiative marks the &lt;em&gt;start&lt;/em&gt; of the exploration process. Part of
+exploring is not knowing what the outcomes will be. Right now we&#x27;re in the
+&amp;quot;pre-RFC&amp;quot; phase of design. What we hope we&#x27;ll achieve is to enumerate the
+full problem space, design space, find a balanced solution, and eventually
+summarize that in the form of an RFC. Then after the RFC is accepted: implement
+it on nightly, work out the kinks, and eventually move to stabilize.  But we may
+at any point during this process conclude that this initiative is actually
+infeasible and start ramping down.&lt;/p&gt;
+&lt;p&gt;But while we can&#x27;t make any &lt;em&gt;assurances&lt;/em&gt; about the outcome of the initiative,
+what we can share is that we&#x27;re pretty optimistic about the initiative overall.
+We wouldn&#x27;t be investing the time we are on this if we didn&#x27;t think we&#x27;d be
+actually be able to see it through to completion.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#q-will-this-make-the-language-more-complicated&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;q-will-this-make-the-language-more-complicated&quot;&gt;&lt;/a&gt;Q: Will this make the language more complicated?&lt;/h3&gt;
+&lt;p&gt;The goal of keyword generics is not to minimize the complexity of the Rust
+programming language, but to &lt;em&gt;minimize the complexity of programming in Rust.&lt;/em&gt;
+These two might sound similar, but they&#x27;re not. Our reasoning here is that by
+&lt;em&gt;adding&lt;/em&gt; a feature, we will actually be able to significantly reduce the surface
+area of the stdlib, crates.io libraries, and user code - leading to a more
+streamlined user experience.&lt;/p&gt;
+&lt;p&gt;Choosing between sync or async code is a fundamental choice which needs to be
+made. This is complexity which cannot be avoided, and which needs to exist
+somewhere. Currently in Rust that complexity is thrust entirely on users of
+Rust, making them responsible for choosing whether their code should support
+async Rust or not. But other languages have made diferent choices. For example
+Go doesn&#x27;t distinguish between &amp;quot;sync&amp;quot; and &amp;quot;async&amp;quot; code, and has a runtime which
+is able to remove that distinction.&lt;/p&gt;
+&lt;p&gt;In today&#x27;s Rust application authors choose whether their application will be sync
+or async, and even after the introduction of keyword generics we don&#x27;t really
+expect that to change. All generics eventually need to have their types known,
+and keyword generics are no different. What we&#x27;re targeting is the choice made
+by &lt;em&gt;library&lt;/em&gt; authors whether their library supports is sync or async. With
+keyword generics library authors will be able to support both with the help of
+the compiler, and leave it up to application authors to decide how they want to
+compile their code.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#q-are-you-building-an-effect-system&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;q-are-you-building-an-effect-system&quot;&gt;&lt;/a&gt;Q: Are you building an effect system?&lt;/h3&gt;
+&lt;p&gt;The short answer is: kind of, but not really. &amp;quot;Effect systems&amp;quot; or &amp;quot;algebraic
+effect systems&amp;quot; generally have a lot of surface area. A common example of what
+effects allow you to do is implement your own &lt;code&gt;try/catch&lt;/code&gt; mechanism. What we&#x27;re
+working on is intentionally limited to built-in keywords only, and wouldn&#x27;t
+allow you to implement anything like that at all.&lt;/p&gt;
+&lt;p&gt;What we do share with effect systems is that we&#x27;re integrating modifier keywords
+more directly into the type system. Modifier keywords like &lt;code&gt;async&lt;/code&gt; are often
+referred to as &amp;quot;effects&amp;quot;, so being able to be conditional over them in
+composable ways effectively gives us an &amp;quot;effect algebra&amp;quot;. But that&#x27;s very
+different from &amp;quot;generalized effect systems&amp;quot; in other languages.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#q-are-you-looking-at-other-keywords-beyond-async-and-const&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;q-are-you-looking-at-other-keywords-beyond-async-and-const&quot;&gt;&lt;/a&gt;Q: Are you looking at other keywords beyond &lt;code&gt;async&lt;/code&gt; and &lt;code&gt;const&lt;/code&gt;?&lt;/h3&gt;
+&lt;p&gt;For a while we were referring to the initiative as &amp;quot;modifier generics&amp;quot; or
+&amp;quot;modifier keyword generics&amp;quot;, but it never really stuck. We&#x27;re only really
+interested in keywords which modify how types work. Right now this is &lt;code&gt;const&lt;/code&gt;
+and &lt;code&gt;async&lt;/code&gt; because that&#x27;s what&#x27;s most relevant for the const-generics WG and
+async WG. But we&#x27;re designing the feature with other keywords in mind as well.&lt;/p&gt;
+&lt;p&gt;The one most at the top of our mind is a future keyword for fallibility. There
+is talk about introducing &lt;code&gt;try fn() {}&lt;/code&gt; or &lt;code&gt;fn () -&amp;gt; throws&lt;/code&gt; syntax. This could
+make it so methods such as &lt;code&gt;Iterator::filter&lt;/code&gt; would be able to use &lt;code&gt;?&lt;/code&gt; to break
+out of the closure and short-circuit iteration.&lt;/p&gt;
+&lt;p&gt;Our main motivation for this feature is that without it, it&#x27;s easy for Rust to
+start to feel &lt;em&gt;disjointed&lt;/em&gt;. We sometimes joke that Rust is actually 3-5
+languages in a trenchcoat. Between const rust, fallible rust, async rust, unsafe
+rust - it can be easy for common APIs to only be available in one variant of the
+language, but not in others. We hope that with this feature we can start to
+systematically close those gaps, leading to a more consistent Rust experience
+for &lt;em&gt;all&lt;/em&gt; Rust users.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#q-what-will-the-backwards-compatibility-story-be-like&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;q-what-will-the-backwards-compatibility-story-be-like&quot;&gt;&lt;/a&gt;Q: What will the backwards compatibility story be like?&lt;/h3&gt;
+&lt;p&gt;Rust has pretty strict backwards-compatibility guarantees, and any feature we
+implement needs to adhere to this. Luckily we have some wiggle room because of
+the edition mechanism, but our goal is to shoot for maximal backwards compat. We
+have some ideas of how we&#x27;re going to make this work though, and we&#x27;re
+cautiously optimistic we might actually be able to pull this off.&lt;/p&gt;
+&lt;p&gt;But to be frank: this is by far one of the hardest aspects of this feature, and
+we&#x27;re lucky that we&#x27;re not designing any of this just by ourselves, but have the
+support of the language team as well.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#q-arent-implementations-sometimes-fundamentally-different&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;q-arent-implementations-sometimes-fundamentally-different&quot;&gt;&lt;/a&gt;Q: Aren&#x27;t implementations sometimes fundamentally different?&lt;/h3&gt;
+&lt;p&gt;Const Rust can&#x27;t make any assumptions about the host it runs on, so it can&#x27;t do
+anything platform-specific. This includes using more efficient instructions of
+system calls which are only available in one platform but not another. In order
+to work around this, the &lt;a href&#x3D;&quot;https://doc.rust-lang.org/std/intrinsics/fn.const_eval_select.html&quot;&gt;&lt;code&gt;const_eval_select&lt;/code&gt;&lt;/a&gt; intrinsic in the standard
+library enables &lt;code&gt;const&lt;/code&gt; code to detect whether it&#x27;s executing during CTFE or
+runtime, and execute different code based on that.&lt;/p&gt;
+&lt;p&gt;For async we expect to be able to add a similar intrinsic, allowing library
+authors to detect whether code is being compiled as sync or async, and do
+something different based on that. This includes: using internal concurrency, or
+switching to a different set of system calls. We&#x27;re not sure whether an
+intrinsic is the right choice for this though; we may want to provide a more
+ergonomic API for this instead. But because keyword generics is being designed
+as a consistent feature, we expect that whatever we end up going with can be used
+consistently by &lt;em&gt;all&lt;/em&gt; modifier keywords.&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#conclusion&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;conclusion&quot;&gt;&lt;/a&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;In this post we&#x27;ve introduced the new keyword generics initiative, explained why
+it exists, and shown a brief example of what it might look like in the future.&lt;/p&gt;
+&lt;p&gt;The initiative is active on the Rust Zulip under
+&lt;a href&#x3D;&quot;https://rust-lang.zulipchat.com/#narrow/stream/328082-t-lang.2Fkeyword-generics&quot;&gt;&lt;code&gt;t-lang/keyword-generics&lt;/code&gt;&lt;/a&gt; - if this seems interesting to you, please
+pop by!&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Thanks to everyone who&#x27;s helped review this post, but in particular:
+&lt;a href&#x3D;&quot;https://github.com/fee1-dead&quot;&gt;fee1-dead&lt;/a&gt;, &lt;a href&#x3D;&quot;https://github.com/danielhenrymantilla&quot;&gt;Daniel Henry-Mantilla&lt;/a&gt;, and &lt;a href&#x3D;&quot;https://github.com/rylev&quot;&gt;Ryan Levick&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;section class&#x3D;&quot;footnotes&quot;&gt;
+&lt;ol&gt;
+&lt;li id&#x3D;&quot;fn1&quot;&gt;
+&lt;p&gt;Rust governance terminology can sometimes get confusing. An
+&amp;quot;initiative&amp;quot; in Rust parlance is different from a &amp;quot;working group&amp;quot; or &amp;quot;team&amp;quot;.
+Initiatives are intentionally limited: they exist to explore, design, and
+implement specific pieces of work - and once that work comes to a close, the
+initiative will wind back down. This is different from, say, the lang team -
+which essentially carries a &lt;code&gt;&#x27;static&lt;/code&gt; lifetime - and whose work does
+not have a clearly defined end. &lt;a href&#x3D;&quot;#fnref1&quot; class&#x3D;&quot;footnote-backref&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id&#x3D;&quot;fn2&quot;&gt;
+&lt;p&gt;R. Nystrom, “What Color is Your Function?,” Feb. 01, 2015.
+https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/
+(accessed Apr. 06, 2022). &lt;a href&#x3D;&quot;#fnref2&quot; class&#x3D;&quot;footnote-backref&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id&#x3D;&quot;fn3&quot;&gt;
+&lt;p&gt;The longer, more specific name would be: &amp;quot;keyword modifier generics&amp;quot;.
+We&#x27;ve tried calling it that, but it&#x27;s a bit of a mouthful. So we&#x27;re just
+sticking with &amp;quot;keyword generics&amp;quot; for now, even if the name for this feature may
+end up being called something more specific in the reference and documentation. &lt;a href&#x3D;&quot;#fnref3&quot; class&#x3D;&quot;footnote-backref&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id&#x3D;&quot;fn4&quot;&gt;
+&lt;p&gt;No really, we can&#x27;t just infer them - and it may not be as
+simple as omitting all &lt;code&gt;.await&lt;/code&gt; calls either. The Async WG is working through
+the full spectrum of cancellation sites, async drop, and more. But for now we&#x27;re
+working under the assumption that &lt;code&gt;.await&lt;/code&gt; will remain relevant going forward.
+And even in the off chance that it isn&#x27;t, fallibility has similar requirements
+at the call site as async does. &lt;a href&#x3D;&quot;#fnref4&quot; class&#x3D;&quot;footnote-backref&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id&#x3D;&quot;fn5&quot;&gt;
+&lt;p&gt;CTFE stands for &amp;quot;Compile Time Function Execution&amp;quot;: &lt;code&gt;const&lt;/code&gt; functions
+can be evaluated during compilation, which is implemented using a Rust
+interpreter (miri). &lt;a href&#x3D;&quot;#fnref5&quot; class&#x3D;&quot;footnote-backref&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id&#x3D;&quot;fn6&quot;&gt;
+&lt;p&gt;Some limitations in &lt;code&gt;async-std&lt;/code&gt; apply: async Rust is missing async
+&lt;code&gt;Drop&lt;/code&gt;, async traits, and async closures. So not all APIs could be duplicated.
+Also &lt;code&gt;async-std&lt;/code&gt; explicitly didn&#x27;t reimplement any of the collection APIs to be
+async-aware, which means users are subject to the &amp;quot;sandwich problem&amp;quot;. The
+purpose of &lt;code&gt;async-std&lt;/code&gt; was to be a proving ground to test whether creating
+an async mirror of the stdlib would be possible: and it&#x27;s proven that it is, as
+far as was possible with missing language features. &lt;a href&#x3D;&quot;#fnref6&quot; class&#x3D;&quot;footnote-backref&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id&#x3D;&quot;fn7&quot;&gt;
+&lt;p&gt;Not to be confused with the higher-order &lt;em&gt;sandwich dilemma&lt;/em&gt; which is
+when you look at the sandwich problem and attempt to determine whether the
+sandwich is two slices of bread with a topping in between, or two toppings with
+a slice of bread in between. Imo the operation part of the problem feels more
+&lt;em&gt;bready&lt;/em&gt;, but that would make for a weird-looking sandwich. Ergo: sandwich
+dilemma. (yes, you can ignore all of this.) &lt;a href&#x3D;&quot;#fnref7&quot; class&#x3D;&quot;footnote-backref&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
 </content>
 
         <author>
-            <name>Tony Arcieri</name>
+            <name>Yoshua Wuyts</name>
         </author>
     </entry>
     
     <entry>
-        <title>Welcome to the Inside Rust blog!</title>
-        <link rel="alternate" href="https://blog.rust-lang.org/inside-rust/2019/09/25/Welcome.html" type="text/html" title="Welcome to the Inside Rust blog!" />
-        <published>2019-09-25T00:00:00Z</published>
-        <updated>2019-09-25T00:00:00Z</updated>
-        <id>https://blog.rust-lang.org/inside-rust/2019/09/25/Welcome.html</id>
-        <content type="html" xml:base="https://blog.rust-lang.org/inside-rust/2019/09/25/Welcome.html">&lt;p&gt;Welcome to the inaugural post of the &lt;strong&gt;Inside Rust&lt;/strong&gt; blog! This is a
-new blog where the various Rust teams and working groups can post
-updates about new developments. It's a great place to watch if you're
-interested in following along with Rust development -- and a
-particularly great place to watch if you're interested in contributing
-to Rust. Expect to see updates on new projects, calls for help, design
-notes, and other similar items. Thanks for reading!&lt;/p&gt;
+        <title>1.62.1 pre-release testing</title>
+        <link rel="alternate" href="https://blog.rust-lang.org/inside-rust/2022/07/16/1.62.1-prerelease.html" type="text/html" title="1.62.1 pre-release testing" />
+        <published>2022-07-16T00:00:00+00:00</published>
+        <updated>2022-07-16T00:00:00+00:00</updated>
+        <id>https://blog.rust-lang.org/inside-rust/2022/07/16/1.62.1-prerelease.html</id>
+        <content type="html" xml:base="https://blog.rust-lang.org/inside-rust/2022/07/16/1.62.1-prerelease.html">&lt;p&gt;The 1.62.1 pre-release is ready for testing. The release is scheduled for
+July 19. &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/blob/stable/RELEASES.md#version-1621-2022-07-19&quot;&gt;Release notes can be found here.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You can try it out locally by running:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-plain&quot;&gt;RUSTUP_DIST_SERVER&#x3D;https://dev-static.rust-lang.org rustup update stable
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The index is &lt;a href&#x3D;&quot;https://dev-static.rust-lang.org/dist/2022-07-16/index.html&quot;&gt;https://dev-static.rust-lang.org/dist/2022-07-16/index.html&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can leave feedback on the &lt;a href&#x3D;&quot;https://internals.rust-lang.org/t/rust-1-62-1-pre-release-testing/17023&quot;&gt;internals thread&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The release team is also thinking about changes to our pre-release process:
+we&#x27;d love your feedback &lt;a href&#x3D;&quot;https://github.com/rust-lang/release-team/issues/16&quot;&gt;on this GitHub issue&lt;/a&gt;.&lt;/p&gt;
 </content>
 
         <author>
-            <name>Niko Matsakis</name>
+            <name>Release automation</name>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>Changes at the Clippy Team</title>
+        <link rel="alternate" href="https://blog.rust-lang.org/inside-rust/2022/07/13/clippy-team-changes.html" type="text/html" title="Changes at the Clippy Team" />
+        <published>2022-07-13T00:00:00+00:00</published>
+        <updated>2022-07-13T00:00:00+00:00</updated>
+        <id>https://blog.rust-lang.org/inside-rust/2022/07/13/clippy-team-changes.html</id>
+        <content type="html" xml:base="https://blog.rust-lang.org/inside-rust/2022/07/13/clippy-team-changes.html">&lt;h2&gt;&lt;a href&#x3D;&quot;#new-members&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;new-members&quot;&gt;&lt;/a&gt;New Members&lt;/h2&gt;
+&lt;p&gt;We are thrilled to publicly announce that &lt;a href&#x3D;&quot;https://github.com/Alexendoo&quot;&gt;Alex
+Macleod&lt;/a&gt;, &lt;a href&#x3D;&quot;https://github.com/dswij&quot;&gt;dswij&lt;/a&gt;, and
+&lt;a href&#x3D;&quot;https://github.com/Jarcho&quot;&gt;Jason Newcomb&lt;/a&gt; have joined the Clippy Team!&lt;/p&gt;
+&lt;p&gt;Jason has been contributing to Clippy since late 2020 and was the most active
+contributor since then. He has contributed in pretty much every area - big
+refactors, bug fixes, and major improvements to our Clippy utils. Having him as
+an additional reviewer will be a great improvement to the team.&lt;/p&gt;
+&lt;p&gt;dswij first started contributing late last summer and has fixed many bugs in
+Clippy as well as implementing some new lints to make Clippy even more helpful.
+With their continued contributions to Clippy and engagement in the project,
+we&#x27;re happy to now have them as a full team member.&lt;/p&gt;
+&lt;p&gt;Alex started contributing to Clippy shortly after and has improved our dev
+tooling quite a bit. Now he wants to continue focusing on our &lt;code&gt;lintcheck&lt;/code&gt; tool,
+which will help detect false positives in new lints before we release them to
+the public. We&#x27;re excited to have Alex on our team and looking forward to all
+the improvements he will bring in the future.&lt;/p&gt;
+&lt;p&gt;With the new additions to the team, we should be able to handle our long PR
+queue better. We currently have over 40 open PRs, which is a good sign for the
+health of the project, but doesn&#x27;t help when we don&#x27;t have the reviewers to
+merge them. Now we do!&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#alumni&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;alumni&quot;&gt;&lt;/a&gt;Alumni&lt;/h2&gt;
+&lt;p&gt;At the same time, we recently granted some of our oldest members the
+well-deserved alumni status. We want to thank &lt;a href&#x3D;&quot;https://github.com/killercup&quot;&gt;Pascal
+Hertleif&lt;/a&gt; and &lt;a href&#x3D;&quot;https://github.com/mcarton&quot;&gt;Martin
+Carton&lt;/a&gt; for all their contributions, especially in
+the early days. People joining today probably never worked with them on Clippy,
+but without them, we probably wouldn&#x27;t be here.&lt;/p&gt;
+&lt;p&gt;We also want to thank &lt;a href&#x3D;&quot;https://github.com/phansch&quot;&gt;Philipp Hansch&lt;/a&gt; for their
+contributions to Clippy and all of the review work they&#x27;ve done over the years.
+To this day phansch is one of the most active Clippy contributors (measured by
+the number of commits).&lt;/p&gt;
+&lt;p&gt;And finally, thank you to &lt;a href&#x3D;&quot;https://github.com/mikerite&quot;&gt;mikerite&lt;/a&gt;, who stepped
+down from an active reviewer/team member position but will be staying on as a
+contributor. We&#x27;re looking forward to continue working with them!&lt;/p&gt;
+</content>
+
+        <author>
+            <name>Philipp Krones</name>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>1.62.0 pre-release testing</title>
+        <link rel="alternate" href="https://blog.rust-lang.org/inside-rust/2022/06/28/1.62.0-prerelease.html" type="text/html" title="1.62.0 pre-release testing" />
+        <published>2022-06-28T00:00:00+00:00</published>
+        <updated>2022-06-28T00:00:00+00:00</updated>
+        <id>https://blog.rust-lang.org/inside-rust/2022/06/28/1.62.0-prerelease.html</id>
+        <content type="html" xml:base="https://blog.rust-lang.org/inside-rust/2022/06/28/1.62.0-prerelease.html">&lt;p&gt;The 1.62.0 pre-release is ready for testing. The release is scheduled for this
+Thursday, June 30th. &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/blob/stable/RELEASES.md#version-1620-2022-06-30&quot;&gt;Release notes can be found here.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You can try it out locally by running:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-plain&quot;&gt;RUSTUP_DIST_SERVER&#x3D;https://dev-static.rust-lang.org rustup update stable
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The index is &lt;a href&#x3D;&quot;https://dev-static.rust-lang.org/dist/2022-06-27/index.html&quot;&gt;https://dev-static.rust-lang.org/dist/2022-06-27/index.html&lt;/a&gt;. You
+can leave feedback on the &lt;a href&#x3D;&quot;https://internals.rust-lang.org/t/rust-1-62-0-prerelease-testing/16913&quot;&gt;internals thread&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The release team is also thinking about changes to our pre-release process:
+we&#x27;d love your feedback &lt;a href&#x3D;&quot;https://github.com/rust-lang/release-team/issues/16&quot;&gt;on this GitHub issue&lt;/a&gt;.&lt;/p&gt;
+</content>
+
+        <author>
+            <name>Pietro Albini</name>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>2021 Annual Survey Report</title>
+        <link rel="alternate" href="https://blog.rust-lang.org/inside-rust/2022/06/21/survey-2021-report.html" type="text/html" title="2021 Annual Survey Report" />
+        <published>2022-06-21T00:00:00+00:00</published>
+        <updated>2022-06-21T00:00:00+00:00</updated>
+        <id>https://blog.rust-lang.org/inside-rust/2022/06/21/survey-2021-report.html</id>
+        <content type="html" xml:base="https://blog.rust-lang.org/inside-rust/2022/06/21/survey-2021-report.html">&lt;p&gt;As usual, we conducted an annual community survey in 2021. We previously shared some some highlights and charts
+in a &lt;a href&#x3D;&quot;https://blog.rust-lang.org/2022/02/15/Rust-Survey-2021.html&quot;&gt;blog post&lt;/a&gt;. This year we would also like to
+make the complete (-ish) dataset available. We have compiled a report which contains data and charts for nearly
+all questions with minimal analysis. We have elided a few sensitive questions and have combined some answers
+or elided some answers where there is any chance of respondents being identified or of sensitive data being released.&lt;/p&gt;
+&lt;p&gt;We intend to produce further small reports with more analysis targetted at specific teams or groups within the
+project. If there is any analysis or processed data you&#x27;d like to see, please get in touch with the survey working group via
+&lt;a href&#x3D;&quot;https://rust-lang.zulipchat.com/#narrow/stream/294169-t-community.2Frust-survey-2021&quot;&gt;Zulip&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Once again, we&#x27;d like to thank all the respondents, our translators, and everyone else who helped to make the survey a success!&lt;/p&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://github.com/rust-lang/surveys/raw/main/surveys/2021-annual-survey/2021-annual-survey-summary.pdf&quot;&gt;Download the report&lt;/a&gt;.&lt;/p&gt;
+</content>
+
+        <author>
+            <name>Nick Cameron</name>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>Rust Compiler June 2022 Steering Cycle</title>
+        <link rel="alternate" href="https://blog.rust-lang.org/inside-rust/2022/06/03/jun-steering-cycle.html" type="text/html" title="Rust Compiler June 2022 Steering Cycle" />
+        <published>2022-06-03T00:00:00+00:00</published>
+        <updated>2022-06-03T00:00:00+00:00</updated>
+        <id>https://blog.rust-lang.org/inside-rust/2022/06/03/jun-steering-cycle.html</id>
+        <content type="html" xml:base="https://blog.rust-lang.org/inside-rust/2022/06/03/jun-steering-cycle.html">&lt;p&gt;On &lt;a href&#x3D;&quot;https://rust-lang.zulipchat.com/#narrow/stream/238009-t-compiler.2Fmeetings/topic/.5Bplanning.20meeting.5D.202022-06-03/near/284883023&quot;&gt;Friday, June 3rd&lt;/a&gt;, the Rust Compiler team had a planning meeting for the June 2022 steering cycle.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This schedule has changed since this post was first published: the dates of the first two meetings were revised.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#t-compiler-june-steering-schedule&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;t-compiler-june-steering-schedule&quot;&gt;&lt;/a&gt;T-compiler June Steering Schedule&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Date&lt;/th&gt;
+&lt;th&gt;Meeting Id&lt;/th&gt;
+&lt;th&gt;Meeting Topic&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://calendar.google.com/event?action&#x3D;TEMPLATE&amp;amp;tmeid&#x3D;NHY4Y3VmdXZqcWJxOWgzOXVyZWM5a3JjaWUgNnU1cnJ0Y2U2bHJ0djA3cGZpM2RhbWdqdXNAZw&amp;amp;tmsrc&#x3D;6u5rrtce6lrtv07pfi3damgjus%40group.calendar.google.com&quot;&gt;2022-06-10&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://github.com/rust-lang/compiler-team/issues/517&quot;&gt;compiler-team#517&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;2022 Q2 P-high review&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://calendar.google.com/event?action&#x3D;TEMPLATE&amp;amp;tmeid&#x3D;Nm8xbGtqbHBzMjdpcTRjcHAybmw4a3Y0ZjEgNnU1cnJ0Y2U2bHJ0djA3cGZpM2RhbWdqdXNAZw&amp;amp;tmsrc&#x3D;6u5rrtce6lrtv07pfi3damgjus%40group.calendar.google.com&quot;&gt;2022-06-17&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://github.com/rust-lang/compiler-team/issues/516&quot;&gt;compiler-team#516&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;path sanitisation changes &lt;a href&#x3D;&quot;https://github.com/rust-lang/rfcs/issues/3127&quot;&gt;rfc#3127&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://calendar.google.com/calendar/event?eid&#x3D;MmE2azQyb2ViODQ4NWwxMWViMzJka2g0cjIgNnU1cnJ0Y2U2bHJ0djA3cGZpM2RhbWdqdXNAZw&amp;amp;ctz&#x3D;GMT-04:00&quot;&gt;2022-06-24&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://github.com/rust-lang/compiler-team/issues/484&quot;&gt;compiler-team#484&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Compiler Feature Backlog Bonanza&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href&#x3D;&quot;https://calendar.google.com/calendar/event?eid&#x3D;MDJyYnJ1cGFtdWR1c2lnNjFmcHJ2b3JlODFfMjAyMjA3MDFUMTQwMDAwWiA2dTVycnRjZTZscnR2MDdwZmkzZGFtZ2p1c0Bn&amp;amp;ctz&#x3D;GMT-04:00&quot;&gt;2022-07-01&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;none&lt;/td&gt;
+&lt;td&gt;(planning for July cycle)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#details&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;details&quot;&gt;&lt;/a&gt;Details&lt;/h3&gt;
+&lt;p&gt;Every fourth Friday, the Rust compiler team decides how
+it is going to use its scheduled steering and design meeting time over the next
+three Fridays.&lt;/p&gt;
+&lt;p&gt;On Friday, 10 June, we will be doing a quarterly &lt;a href&#x3D;&quot;https://github.com/rust-lang/compiler-team/issues/517&quot;&gt;review of the open P-high issues&lt;/a&gt;.
+pnkfelix will do some ahead of time work triaging
+some of the issues, and potentially prepare a meeting document summarizing the
+remainder, to maximize the quality of our synchronous in-meeting time.&lt;/p&gt;
+&lt;p&gt;On Friday, 17 June, we will review &lt;a href&#x3D;&quot;https://github.com/rust-lang/rfcs/issues/3127&quot;&gt;RFC PR #3127&lt;/a&gt;, which proposes
+new rustc and Cargo options to allow path sanitisation by default.&lt;/p&gt;
+&lt;p&gt;On Friday, 24 June, we will be having a &lt;a href&#x3D;&quot;https://github.com/rust-lang/compiler-team/issues/484&quot;&gt;&amp;quot;backlog bonanza&amp;quot;&lt;/a&gt;, in a
+similar vein to that done by T-lang, to review the list of unimplemented or
+partially-implemented features. pnkfelix and Jack Huey will prepare a document
+to drive the meeting.&lt;/p&gt;
+&lt;p&gt;On Friday, 1 July, we will hold our planning meeting for the next steering cycle in July.&lt;/p&gt;
+&lt;p&gt;Each meeting will run from 2pm to 3pm GMT, and will take place on the
+&lt;a href&#x3D;&quot;https://rust-lang.zulipchat.com/#narrow/stream/238009-t-compiler.2Fmeetings&quot;&gt;T-compiler/meetings zulip stream&lt;/a&gt;.&lt;/p&gt;
+</content>
+
+        <author>
+            <name>Felix Klock</name>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>Concluding the events of last November</title>
+        <link rel="alternate" href="https://blog.rust-lang.org/inside-rust/2022/05/26/Concluding-events-mods.html" type="text/html" title="Concluding the events of last November" />
+        <published>2022-05-26T00:00:00+00:00</published>
+        <updated>2022-05-26T00:00:00+00:00</updated>
+        <id>https://blog.rust-lang.org/inside-rust/2022/05/26/Concluding-events-mods.html</id>
+        <content type="html" xml:base="https://blog.rust-lang.org/inside-rust/2022/05/26/Concluding-events-mods.html">&lt;p&gt;&lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2021/11/25/in-response-to-the-moderation-team-resignation.html&quot;&gt;With the moderators&#x27; resignation in November&lt;/a&gt;, we (Josh Gould and Khionu Sybiern) had the mantle of the Moderation Team offered to us, and we caught up to speed on what led up to this conflict. Their resignation became a catalyst, and we commited with the rest of the project leadership to do our best to solve the issues present and going forward.&lt;/p&gt;
+&lt;p&gt;After these months, the following update was shared with core and team leaders:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The moderation issue has been brought to a resolution. This case was open for an unsually long time, which made this process a considerably worse experience than necessary for all involved. This was caused in part due to the lack of well defined procedures and the underspecified governance structure of the project. Another major factor was the complexity of the situation: it was not a simple case of a CoC violation, but rather a long-standing collaboration and communication issue involving interpersonal conflict and burnout. While we consider this case resolved, we very much recognize the harm that has been done by how the situation was handled, and will continue to work on improving the way we avoid and handle these kind of issues in the future.&lt;/p&gt;
+&lt;p&gt;It should be noted that all involved parties are considered in good standing with the project.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Bringing a close to this situation is a huge relief, but it is also far from the last step on the journey to recovering as a community. While project leadership &lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2022/05/19/governance-update.html&quot;&gt;continues to work on these issues&lt;/a&gt;, the Moderation Team is working on an RFC to create supporting mechanisms to cover a wider range of issues. We&#x27;re working with professionals in mediation and other relevant fields to make sure we are prepared. The RFC additionally will better define areas of moderation that were overlooked and improve collaboration and safety.&lt;/p&gt;
+&lt;p&gt;The number one thing we would like going forward is a stronger two-way relationship between our team and the community. Going forward, we will be asking for your help to make contributing to and using Rust as healthy of an experience as possible.&lt;/p&gt;
+</content>
+
+        <author>
+            <name>Khionu Sybiern</name>
         </author>
     </entry>
     
